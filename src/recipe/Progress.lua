@@ -8,9 +8,10 @@ local mt = {
     __index = _M
 }
 
-function _M:new(assemblyItem)
+function _M:new(processItem)
     local self = {
-        item = assemblyItem,
+        processItem = processItem,
+        items = processItem.items,
         startTime = os.date("%Y-%m-%d %H:%M:%S", os.time()),
         endTime = nil
     }

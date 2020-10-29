@@ -3,10 +3,9 @@
 --- Created by Admin.
 --- DateTime: 2020/10/26 18:40
 ---
-local pg = require("Progress")
---local matcher = require("recipe/matcher")
-local recipes = require("recipe/recipes")
---local setter = require("recipe/setter")
+--local pg = require("recipe.Progress")
+local matcher = require("recipe.matcher")
+local recipes = require("recipe.recipes")
 --local reader = require("chest/reader")
 --print(pg)
 --local pgtest = pg.new("test")
@@ -15,3 +14,17 @@ local recipes = require("recipe/recipes")
 
 --local recipe = matcher.match(recipes)
 --print(recipe)
+
+local testData = {
+    { name = "item1" },
+    { name = "item2" },
+    { name = "item3" },
+    { name = "item4" },
+    { name = "item5" },
+    { name = "item6" }
+}
+
+local recipe = matcher.match(testData)
+
+print("==========")
+print(recipe)

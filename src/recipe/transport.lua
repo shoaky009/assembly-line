@@ -9,7 +9,6 @@ local inputProxy = ci.proxy
 local chestSourceSide = ci.chestSourceSide
 local chestOutputSide = ci.chestOutputSide
 local moltenOutputSide = ci.moltenOutputSide
---ALL trans method need 2 check output size if over the output size suspend thead
 
 function _M.transFluid(recipeFluid, inputBusSlot)
     local fluidInput = _M.getFluidProxyBySlot(inputBusSlot)
@@ -31,12 +30,12 @@ function _M.transFluid(recipeFluid, inputBusSlot)
         if not index then
             --TODO auto store 2 db 测试filter的使用
             -- local craftable = fluidInterface.getCraftables({name = recipeFluid.name})
-            error("fluid:".. name .." not index in db")
+            error("fluid:" .. name .. " not index in db")
         end
         local dbAddress = db.address
         for i = 0, 4 do
             --TODO interface 默认底部 改成可配置side
-            fluidInterface.setFluidInterfaceConfiguration(0, i, dbAddress, index)
+            fluidInterface.setFluidInterfaceConfiguration(fluidSourceSide, i, dbAddress, index)
         end
     end
 

@@ -1,4 +1,6 @@
-local config = {}
+local config = {
+    chestInput = {}
+}
 local manager = require("manager")
 local sides = require("sides")
 
