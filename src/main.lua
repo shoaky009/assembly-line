@@ -25,23 +25,7 @@ function Main.start()
         end
         --start progress
         local pg = progress:new(recipe)
-        local fluidSlot = 0
-        for _, v in ipairs(pg.items) do
-            local type = v.type
-            if type == nil or type == "item" then
-                pg:transRecipeItem(v)
-            elseif type == "molten" then
-                fluidSlot = fluidSlot + 1
-                pg:transRecipeMolten(v)
-            elseif type == "fluid" then
-                fluidSlot = fluidSlot + 1
-                pg:transRecipeFluid(v, fluidSlot)
-            elseif type == "cell" then
-                fluidSlot = fluidSlot + 1
-                pg:transRecipeCell(v, fluidSlot)
-            end
-        end
-        print("all transport success waiting for assembly line crafting")
+        pg:start()
         --redo
     end
 

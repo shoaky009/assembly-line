@@ -3,7 +3,7 @@
 --- Created by Admin.
 --- DateTime: 2020/10/26 18:40
 ---
---local pg = require("recipe.Progress")
+local pg = require("recipe.Progress")
 local matcher = require("recipe.matcher")
 local recipes = require("recipe.recipes")
 --local reader = require("chest/reader")
@@ -25,6 +25,7 @@ local testData = {
 }
 
 local recipe = matcher.match(testData)
-
+pg:new(recipe)
+pg:start()
 print("==========")
 print(recipe)

@@ -4,7 +4,7 @@ local config = {
 local manager = require("manager")
 local sides = require("sides")
 
-config.chestInput.proxy = manager.proxy("address0")
+config.chestInput.proxy = manager.proxy("your address")
 --me interface chest
 config.chestInput.chestSourceSide = sides.top
 config.chestInput.chestOutputSide = sides.top
@@ -13,16 +13,16 @@ config.chestInput.moltenOutputSide = sides.west
 
 --fluid source side
 config.fluidSourceSide = sides.south
-config.fluidInput1 = manager.proxy("address1")
-config.fluidInput2 = manager.proxy("address2")
-config.fluidInput3 = manager.proxy("address3")
-config.fluidInput4 = manager.proxy("address4")
+config.fluidInput1 = manager.proxy("your address")
+config.fluidInput2 = manager.proxy("your address")
+config.fluidInput3 = manager.proxy("your address")
+config.fluidInput4 = manager.proxy("your address")
 
 --me fluid interfaces
-config.fluidInterface1 = manager.proxy("iAddress1")
-config.fluidInterface2 = manager.proxy("iAddress2")
-config.fluidInterface3 = manager.proxy("iAddress3")
-config.fluidInterface4 = manager.proxy("iAddress4")
+config.fluidInterface1 = manager.proxy("your address")
+config.fluidInterface2 = manager.proxy("your address")
+config.fluidInterface3 = manager.proxy("your address")
+config.fluidInterface4 = manager.proxy("your address")
 
 
 return config

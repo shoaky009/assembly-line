@@ -57,8 +57,8 @@ function _M.transItem(item, amount)
 end
 
 function _M.transCell(recipeItem, fluidSlot)
-    --合成好cell再回到网络 设置接口
-
+    --cell到熔物品的超级缸输出缓冲
+    _M.trans(recipeItem, moltenOutputSide)
 end
 
 function _M.trans(item, amount, outputSide)
