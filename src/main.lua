@@ -1,8 +1,8 @@
 local Main = {}
 local event = require("event")
-local chestReader = require("chest/reader")
-local recipeMatcher = require("matcher")
-local progress = require("recipe/Progress")
+local chestReader = require("chest.reader")
+local recipeMatcher = require("recipe.matcher")
+local progress = require("recipe.Progress")
 local thread = require("thread")
 
 --local eventHandlers = setmetatable(
@@ -11,7 +11,7 @@ local thread = require("thread")
 --            return Main.unknownEvent
 --        end })
 local running = true
-Main.start()
+
 
 function Main.start()
     --TODO timer
@@ -40,3 +40,5 @@ end
 --        eventHandlers[eventID](...)
 --    end
 --end
+
+Main.start()

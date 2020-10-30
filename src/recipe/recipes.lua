@@ -9,10 +9,10 @@ local CELL = "cell"
 R["gregtech:meta_item_1.64.32607"] = {
     nickname = "Electric Motor (ZPM)",
     items = {
-        { "重型防护板", type = ITEM, amount = 1 },
-        { "压缩冰板", type = ITEM, amount = 3 },
-        { "压缩冰板", type = MOLTEN, amount = 3 },
-        { "铱锇合金螺栓", type = MOLTEN, amount = 3 }
+        { "Heavy-Duty Plate", type = ITEM, amount = 1 },
+        { "Compressed Ice Plate", type = ITEM, amount = 3 },
+        { "Compressed Ice Plate", type = ITEM, amount = 3 },
+        { "gt.metaitem.01.26317.name", type = ITEM, amount = 4 }
     }
 }
 

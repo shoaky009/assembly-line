@@ -4,7 +4,7 @@ local ci = config.chestInput
 local chestSourceSide = ci.chestSourceSide
 
 function _M.hasItem()
-    local stacks = ci.proxy.getAllStack(chestSourceSide)
+    local stacks = ci.proxy.getAllStacks(chestSourceSide)
     if not stacks then
         return false, nil
     end

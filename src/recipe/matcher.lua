@@ -1,5 +1,5 @@
 local _M = {}
-local recipes = require("recipe/recipes")
+local recipes = require("recipe.recipes")
 
 function _M.match(sourceItems)
     if sourceItems == nil or not type(sourceItems) == "table" then
@@ -9,13 +9,19 @@ function _M.match(sourceItems)
     local r = recipes.getRecipes()
     local source = {}
     for _, v in ipairs(sourceItems) do
-        local var0 = source[v.name]
-        if var0 then
-            source[v.name] = var0 + 1
+        if v.label then
+            local var0 = source[v.label]
+            if var0 then
+                source[var0] = var0 + 1
+            else
+                source[var0] = 1
+            end
         else
-            source[v.name] = 1
+            break
         end
     end
+
+    print(table.concat(source, ","))
 
     for _, v in pairs(r) do
         local items = v.items

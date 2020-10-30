@@ -1,5 +1,5 @@
 local setmetatable = setmetatable
-local transport = require("recipe/transport")
+local transport = require("recipe.transport")
 local computer = require("computer")
 
 local _M = {}
