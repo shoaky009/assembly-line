@@ -6,8 +6,8 @@ local FLUID = "fluid"
 local CELL = "cell"
 
 --TODO add recipes
-R["gregtech:meta_item_1.64.32607"] = {
-    nickname = "Electric Motor (ZPM)",
+R["Heavy-DutyAlloyIngotT4"] = {
+    nickname = "Heavy-DutyAlloyIngotT4",
     items = {
         { "Heavy-Duty Plate", type = ITEM, amount = 1 },
         { "Compressed Ice Plate", type = ITEM, amount = 3 },

@@ -62,7 +62,7 @@ function _M.transCell(recipeItem, fluidSlot)
 end
 
 function _M.trans(item, amount, outputSide)
-    local sourceSlot = _M.getSourceSlotByName(item, amount)
+    local sourceSlot = _M.getSourceSlotByLabel(item, amount)
     local outputSlot = _M.getAvailableOutputSlot(outputSide)
     local transferred = inputProxy.transferItem(chestSourceSide, outputSide, amount, sourceSlot, outputSlot)
     if transferred < amount then
@@ -88,21 +88,21 @@ function _M.getAvailableOutputSlot(side)
     end
 end
 
-function _M.getSourceSlotByName(name, amount)
+function _M.getSourceSlotByLabel(label, amount)
     local stacks = inputProxy.getAllStacks(chestSourceSide)
     if not stacks then
         error("place check 'config.chestInput.chestSourceSide' no stacks found")
     end
-    for i, v in ipairs(stacks.getAll()) do
-        if v and v.name == name then
+    for i, v in pairs(stacks.getAll()) do
+        if v and v.label == label then
             if v.size >= amount then
                 return i
             else
-                print("not enough item:" .. name .. " in source chest skip..")
+                print("not enough item:" .. label .. " in source chest skip..")
             end
         end
     end
-    error("no item " .. name .. "in source chest")
+    error("no item " .. label .. "in source chest")
 end
 
 return _M

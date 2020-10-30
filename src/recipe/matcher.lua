@@ -8,13 +8,14 @@ function _M.match(sourceItems)
 
     local r = recipes.getRecipes()
     local source = {}
-    for _, v in ipairs(sourceItems) do
-        if v.label then
-            local var0 = source[v.label]
+    for _, v in pairs(sourceItems) do
+        local label = v.label
+        if label then
+            local var0 = source[label]
             if var0 then
-                source[var0] = var0 + 1
+                source[label] = var0 + 1
             else
-                source[var0] = 1
+                source[label] = 1
             end
         else
             break
@@ -24,9 +25,8 @@ function _M.match(sourceItems)
     print(table.concat(source, ","))
 
     for _, v in pairs(r) do
-        local items = v.items
         local flag = true
-        for __, item in ipairs(items) do
+        for __, item in ipairs(v.items) do
             if not source[item[1]] then
                 flag = false
                 break
@@ -34,6 +34,7 @@ function _M.match(sourceItems)
         end
 
         if flag then
+            print("matched recipe:" .. v.nickname)
             return v
         end
     end
