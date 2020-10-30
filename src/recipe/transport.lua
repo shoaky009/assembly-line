@@ -2,6 +2,7 @@ local _M = {}
 local config = require("conf.config")
 local sides = require("sides")
 local manager = require("manager")
+local event = require("event")
 local fluidSourceSide = config.fluidSourceSide
 local tankSourceSide = config.tankSourceSide
 
@@ -94,7 +95,7 @@ function _M.getSourceSlotByLabel(label, amount)
     if not stacks then
         error("place check 'config.chestInput.chestSourceSide' no stacks found")
     end
-    for i, v in ipairs(stacks.getAll()) do
+    for i, v in pairs(stacks.getAll()) do
         if v and v.label == label then
             if v.size >= amount then
                 return i + 1
@@ -108,10 +109,24 @@ end
 
 function _M.suckTankFluid(slot, amount)
     local fluidInput = _M.getFluidProxyBySlot(slot)
-    local success, transferred = fluidInput.transferFluid(tankSourceSide, sides.top, amount)
-    if not success or transferred < amount then
-        error("transfer fluid failed request amount" ..
-                tostring(amount) .. " actually transferred " .. tostring(transferred))
+    local suck = 0
+    local failed = 0
+
+    --需要优化,后续有需求再调整
+    while suck < amount do
+        local success, transferred = fluidInput.transferFluid(tankSourceSide, sides.top, amount)
+        suck = suck + transferred
+        if suck == amount then
+            break
+        end
+        if not success or transferred < amount then
+            failed = failed + 1
+            if failed == 5 then
+                error("transfer fluid failed request amount" .. amount .. " actually transferred " .. suck)
+            end
+        end
+        --也许有些提取比较久2秒不够
+        os.sleep(2)
     end
 end
 

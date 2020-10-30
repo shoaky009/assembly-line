@@ -42,7 +42,7 @@ function _M:start()
         end
         self:suckTankFluid()
         self.transportCost = os.time() - self.startTime
-        print("all transport cost:" .. self.transportCost .. ", waiting for assembly line crafting")
+        print("all transported cost:" .. self.transportCost .. ", waiting for assembly line crafting")
     --end, function ()
     --    computer.beep(1000, 5)
     --end)

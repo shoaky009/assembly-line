@@ -17,8 +17,8 @@ R["Heavy-DutyAlloyIngotT4"] = {
     }
 }
 
-R["LuV"] = {
-    nickname = "LuV",
+R["Electric Motor (LuV)"] = {
+    nickname = "Electric Motor (LuV)",
     items = {
         { "gt.metaitem.01.23399.name", type = ITEM, amount = 1 },
         { "gt.metaitem.02.22374.name", type = ITEM, amount = 2 },
