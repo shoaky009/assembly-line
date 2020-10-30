@@ -20,10 +20,10 @@ config.fluidInput3 = manager.proxy("ca9d9aa3-cab5-4061-ad38-64d291dbd319")
 config.fluidInput4 = manager.proxy("e5b0e1d8-0599-4482-ac23-aa2f622c4059")
 
 --me fluid interfaces
-config.fluidInterface1 = manager.proxy("87aafc0c-522a-4c6b-bee2c0298e2a7611")
-config.fluidInterface2 = manager.proxy("f77c56a6-a8f6-47b3-8dda-02c46e77e9bb")
-config.fluidInterface3 = manager.proxy("0015cb12-d5c5-41fb-ad88-cc49fc327610")
-config.fluidInterface4 = manager.proxy("da6aa171-ec43-475d-ae41-d6843cac5df0")
+config.fluidInterface1 = manager.proxy("29dde4cd-0b24-4106-9b95-c4deb3c48c6f")
+config.fluidInterface2 = manager.proxy("22dc2255-d84b-4a4f-819e-1bea21297de3")
+config.fluidInterface3 = manager.proxy("c841470c-7861-49ba-956a-ab12623c4514")
+config.fluidInterface4 = manager.proxy("c6529344-c66b-4600-b07b-45358e141616")
 
 
 return config

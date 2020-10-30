@@ -11,17 +11,17 @@ function _M.getFluidDatabase()
     return db
 end
 
-function _M.getFluidIndexByName(name)
-    local cache = dbCache[name]
+function _M.getFluidIndexByLabel(label)
+    local cache = dbCache[label]
     if cache then
         return cache
     end
 
     for i = 1, 81 do
         local data = db.get(i)
-        if data and data.name == name then
+        if data and data.label == label then
             --local hash = db.computeHash(i)
-            dbCache[name] = i
+            dbCache[label] = i
             return i
         end
     end

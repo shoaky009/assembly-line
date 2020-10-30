@@ -29,14 +29,14 @@ function _M:start()
                 self:transRecipeItem(v)
             elseif type == "molten" then
                 fluidSlot = fluidSlot + 1
-                self.suckSlot[fluidSlot] = v.amount
+                self.suckSlot[fluidSlot] = v.amount * v.times
                 self:transRecipeMolten(v)
             elseif type == "fluid" then
                 fluidSlot = fluidSlot + 1
                 self:transRecipeFluid(v, fluidSlot)
             elseif type == "cell" then
                 fluidSlot = fluidSlot + 1
-                self.suckSlot[fluidSlot] = v.amount
+                self.suckSlot[fluidSlot] = v.amount * 1000
                 self:transRecipeCell(v, fluidSlot)
             end
         end

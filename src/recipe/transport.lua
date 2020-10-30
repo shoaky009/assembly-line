@@ -2,7 +2,6 @@ local _M = {}
 local config = require("conf.config")
 local sides = require("sides")
 local manager = require("manager")
-local event = require("event")
 local fluidSourceSide = config.fluidSourceSide
 local tankSourceSide = config.tankSourceSide
 
@@ -23,22 +22,27 @@ function _M.transFluid(recipeFluid, inputBusSlot)
         error("fluid interface " .. tostring(inputBusSlot) .. "not found plz check config")
     end
 
-    local conf = fluidInterface.getFluidInterfaceConfiguration(0)
-    local name = recipeFluid.name
-    if not conf.name == name then
+    --BETA 试用最后一个
+    local conf = fluidInterface.getFluidInterfaceConfiguration(5)
+    local label = recipeFluid[1]
+    --配置与配方不一样或者没有
+    if not conf or not conf.label == label then
         --set all config the same
         local db = manager.getFluidDatabase()
-        local index = manager.getFluidIndexByName(name)
+        local index = manager.getFluidIndexByLabel(label)
         if not index then
             --TODO auto store 2 db 测试filter的使用
-            -- local craftable = fluidInterface.getCraftables({name = recipeFluid.name})
-            error("fluid:" .. name .. " not index in db")
+            local craftable = fluidInterface.getCraftables({name = label})
+            print(craftable)
+            error("fluid:" .. label .. " not index in db")
         end
         local dbAddress = db.address
-        for i = 0, 4 do
-            --TODO interface 默认底部 改成可配置side
-            fluidInterface.setFluidInterfaceConfiguration(fluidSourceSide, i, dbAddress, index)
+        local success = fluidInterface.setFluidInterfaceConfiguration(5, dbAddress, index, 1)
+        if not success then
+            error("set fluid interface failed, label:" .. label .. "db index:" .. index)
         end
+        --后面优化这部分 因为transferFluid不能提取指定槽位
+        os.sleep(10)
     end
 
     --FIXME 有时候会从第二个slot提取
@@ -115,7 +119,9 @@ function _M.suckTankFluid(slot, amount)
     --需要优化,后续有需求再调整
     while suck < amount do
         local success, transferred = fluidInput.transferFluid(tankSourceSide, sides.top, amount)
-        suck = suck + transferred
+        if transferred then
+            suck = suck + transferred
+        end
         if suck == amount then
             break
         end

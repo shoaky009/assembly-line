@@ -13,7 +13,7 @@ R["Heavy-DutyAlloyIngotT4"] = {
         { "Compressed Ice Plate", type = ITEM, amount = 3 },
         { "Compressed Ice Plate", type = ITEM, amount = 3 },
         { "gt.metaitem.01.26317.name", type = ITEM, amount = 4 },
-        { "gt.metaitem.01.26314.name", type = MOLTEN, amount = 2}
+        { "gt.metaitem.01.26314.name", type = MOLTEN, amount = 2, times = 18}
     }
 }
 
@@ -25,7 +25,8 @@ R["Electric Motor (LuV)"] = {
         { "细钌铱合金导线", type = ITEM, amount = 64 },
         { "细钌铱合金导线", type = ITEM, amount = 64 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
-        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1}
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144},
+        { "fluid.lubricant", type = FLUID, amount = 250}
     }
 }
 
