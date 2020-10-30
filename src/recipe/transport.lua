@@ -1,5 +1,5 @@
 local _M = {}
-local config = require("conf.config")
+local config = require("conf/config")
 local sides = require("sides")
 local manager = require("manager")
 local fluidSourceSide = config.fluidSourceSide

@@ -1,8 +1,8 @@
 local Main = {}
 local event = require("event")
-local chestReader = require("chest.reader")
+local chestReader = require("chest/reader")
 local recipeMatcher = require("matcher")
-local progress = require("recipe.Progress")
+local progress = require("recipe/Progress")
 local thread = require("thread")
 
 --local eventHandlers = setmetatable(

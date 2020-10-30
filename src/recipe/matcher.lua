@@ -1,5 +1,5 @@
 local _M = {}
-local recipes = require("recipe.recipes")
+local recipes = require("recipe/recipes")
 
 function _M.match(sourceItems)
     if sourceItems == nil or not type(sourceItems) == "table" then

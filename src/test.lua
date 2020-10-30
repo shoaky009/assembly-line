@@ -3,9 +3,9 @@
 --- Created by Admin.
 --- DateTime: 2020/10/26 18:40
 ---
-local pg = require("recipe.Progress")
-local matcher = require("recipe.matcher")
-local recipes = require("recipe.recipes")
+local pg = require("recipe/Progress")
+local matcher = require("recipe/matcher")
+local recipes = require("recipe/recipes")
 --local reader = require("chest/reader")
 --print(pg)
 --local pgtest = pg.new("test")
