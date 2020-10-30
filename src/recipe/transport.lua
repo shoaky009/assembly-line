@@ -49,11 +49,11 @@ function _M.transFluid(recipeFluid, inputBusSlot)
 end
 
 function _M.trans2melt(recipeItem)
-    _M.trans(recipeItem, moltenOutputSide)
+    _M.trans(recipeItem[1], recipeItem.amount, moltenOutputSide)
 end
 
-function _M.transItem(item, amount)
-    _M.trans(item, amount, chestOutputSide)
+function _M.transItem(recipeItem)
+    _M.trans(recipeItem[1], recipeItem.amount, chestOutputSide)
 end
 
 function _M.transCell(recipeItem, fluidSlot)
@@ -93,10 +93,10 @@ function _M.getSourceSlotByLabel(label, amount)
     if not stacks then
         error("place check 'config.chestInput.chestSourceSide' no stacks found")
     end
-    for i, v in pairs(stacks.getAll()) do
+    for i, v in ipairs(stacks.getAll()) do
         if v and v.label == label then
             if v.size >= amount then
-                return i
+                return i + 1
             else
                 print("not enough item:" .. label .. " in source chest skip..")
             end

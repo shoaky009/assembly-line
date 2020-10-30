@@ -11,6 +11,7 @@ function _M.match(sourceItems)
     for _, v in pairs(sourceItems) do
         local label = v.label
         if label then
+            print(label)
             local var0 = source[label]
             if var0 then
                 source[label] = var0 + 1
@@ -21,8 +22,6 @@ function _M.match(sourceItems)
             break
         end
     end
-
-    print(table.concat(source, ","))
 
     for _, v in pairs(r) do
         local flag = true

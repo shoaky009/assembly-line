@@ -20,10 +20,11 @@ end
 
 function _M:start()
     print(self.processItem.nickname .. " processing")
-    xpcall(function ()
+    --xpcall(function ()
         local fluidSlot = 0
-        for _, v in ipairs(self.items) do
+        for _, v in pairs(self.items) do
             local type = v.type
+            print("trans item:" .. v[1] .. " type:".. type .. " amount:" .. v.amount )
             if type == nil or type == "item" then
                 self:transRecipeItem(v)
             elseif type == "molten" then
@@ -39,13 +40,13 @@ function _M:start()
         end
         self.transportCost = os.time() - self.startTime
         print("all transport cost:" .. self.transportCost .. ", waiting for assembly line crafting")
-    end, function ()
-        computer.beep(1000, 5)
-    end)
+    --end, function ()
+    --    computer.beep(1000, 5)
+    --end)
 end
 
 function _M:transRecipeItem(recipeItem)
-    transport.transItem(recipeItem.name, recipeItem.amount)
+    transport.transItem(recipeItem)
 end
 
 function _M:transRecipeMolten(recipeItem)
