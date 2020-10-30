@@ -9,12 +9,10 @@ local CELL = "cell"
 R["gregtech:meta_item_1.64.32607"] = {
     nickname = "Electric Motor (ZPM)",
     items = {
-        { "item1", type = ITEM, amount = 1 },
-        { "item2", type = ITEM, amount = 2 },
-        { "item3", type = MOLTEN, amount = 3.0 },
-        { "item4", type = MOLTEN, amount = 2.0 },
-        { "item5", type = FLUID, amount = 144.0 },
-        { "item6", type = CELL, amount = 1 }
+        { "重型防护板", type = ITEM, amount = 1 },
+        { "压缩冰板", type = ITEM, amount = 3 },
+        { "压缩冰板", type = MOLTEN, amount = 3 },
+        { "铱锇合金螺栓", type = MOLTEN, amount = 3 }
     }
 }
 
