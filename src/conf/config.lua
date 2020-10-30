@@ -13,6 +13,7 @@ config.chestInput.moltenOutputSide = sides.west
 
 --fluid source side
 config.fluidSourceSide = sides.south
+config.tankSourceSide = sides.west
 config.fluidInput1 = manager.proxy("903b7eac-7abb-47f7-ad61-c52a61770a0f")
 config.fluidInput2 = manager.proxy("3dfb8047-80e0-41e0-9513-99f6dc292352")
 config.fluidInput3 = manager.proxy("ca9d9aa3-cab5-4061-ad38-64d291dbd319")

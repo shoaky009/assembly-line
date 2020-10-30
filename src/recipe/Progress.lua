@@ -11,7 +11,7 @@ local mt = {
 function _M:new(processItem)
     self.processItem = processItem
     self.items = processItem.items
-    --startTime = os.date("%Y-%m-%d %H:%M:%S", os.time()),
+    self.suckSlot = {}
     self.startTime = os.time()
     self.endTime = nil
     self.transportCost = nil
@@ -29,15 +29,18 @@ function _M:start()
                 self:transRecipeItem(v)
             elseif type == "molten" then
                 fluidSlot = fluidSlot + 1
+                self.suckSlot[fluidSlot] = v.amount
                 self:transRecipeMolten(v)
             elseif type == "fluid" then
                 fluidSlot = fluidSlot + 1
                 self:transRecipeFluid(v, fluidSlot)
             elseif type == "cell" then
                 fluidSlot = fluidSlot + 1
+                self.suckSlot[fluidSlot] = v.amount
                 self:transRecipeCell(v, fluidSlot)
             end
         end
+        self:suckTankFluid()
         self.transportCost = os.time() - self.startTime
         print("all transport cost:" .. self.transportCost .. ", waiting for assembly line crafting")
     --end, function ()
@@ -59,6 +62,12 @@ end
 
 function _M:transRecipeCell(recipeItem, fluidSlot)
     transport.transCell(recipeItem, fluidSlot)
+end
+
+function _M:suckTankFluid()
+    for slot, amount in pairs(self.suckSlot) do
+        transport.suckTankFluid(slot, amount)
+    end
 end
 
 return _M

@@ -3,6 +3,7 @@ local config = require("conf.config")
 local sides = require("sides")
 local manager = require("manager")
 local fluidSourceSide = config.fluidSourceSide
+local tankSourceSide = config.tankSourceSide
 
 local ci = config.chestInput
 local inputProxy = ci.proxy
@@ -103,6 +104,15 @@ function _M.getSourceSlotByLabel(label, amount)
         end
     end
     error("no item " .. label .. "in source chest")
+end
+
+function _M.suckTankFluid(slot, amount)
+    local fluidInput = _M.getFluidProxyBySlot(slot)
+    local success, transferred = fluidInput.transferFluid(tankSourceSide, sides.top, amount)
+    if not success or transferred < amount then
+        error("transfer fluid failed request amount" ..
+                tostring(amount) .. " actually transferred " .. tostring(transferred))
+    end
 end
 
 return _M

@@ -26,7 +26,7 @@ function _M.match(sourceItems)
     for _, v in pairs(r) do
         local flag = true
         for __, item in ipairs(v.items) do
-            if not source[item[1]] then
+            if not source[item[1]] and v.type ~= "fluid" then
                 flag = false
                 break
             end
