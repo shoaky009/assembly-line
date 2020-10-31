@@ -3,11 +3,10 @@ local event = require("event")
 local chestReader = require("chest.reader")
 local recipeMatcher = require("recipe.matcher")
 local progress = require("recipe.Progress")
-
-local timer
+local computer = require("computer")
 
 function Main.start()
-    timer = event.timer(2, Main.loop, math.huge)
+    local timer = event.timer(2, Main.loop, math.huge)
     while true do
         local id, _, x, y = event.pullMultiple("interrupted")
         if id == "interrupted" then
@@ -24,7 +23,7 @@ function Main.loop()
     if hasItem then
         local recipe = recipeMatcher.match(all)
         if not recipe then
-            print(os.date("%Y-%m-%d %H:%M:%S", os.time()) .. "no recipe match")
+            print(computer.uptime() .. "no recipe match")
             return
         end
         --start progress
