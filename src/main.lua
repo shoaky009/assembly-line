@@ -11,7 +11,7 @@ function Main.start()
     while true do
         local id, _, x, y = event.pullMultiple("interrupted")
         if id == "interrupted" then
-            print("interrupted cacel timer")
+            print(os.date("%Y-%m-%d %H:%M:%S", os.time()) .. "interrupted cacel timer")
             event.cancel(timer)
             break
         end
