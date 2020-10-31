@@ -21,7 +21,6 @@ function Main.loop()
         --start progress
         local pg = progress:new(recipe)
         pg:start()
-        --redo
     end
 end
 
