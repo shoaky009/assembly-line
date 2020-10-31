@@ -26,7 +26,7 @@ R["Electric Motor (LuV)"] = {
         { "细钌铱合金导线", type = ITEM, amount = 64 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144},
-        { "fluid.lubricant", type = FLUID, amount = 250}
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250}
     }
 }
 

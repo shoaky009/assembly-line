@@ -22,8 +22,7 @@ function _M.transFluid(recipeFluid, inputBusSlot)
         error("fluid interface " .. tostring(inputBusSlot) .. "not found plz check config")
     end
 
-    --BETA 试用最后一个
-    local conf = fluidInterface.getFluidInterfaceConfiguration(5)
+    local conf = fluidInterface.getFluidInterfaceConfiguration(1)
     local label = recipeFluid[1]
     --配置与配方不一样或者没有
     if not conf or not conf.label == label then
@@ -32,12 +31,12 @@ function _M.transFluid(recipeFluid, inputBusSlot)
         local index = manager.getFluidIndexByLabel(label)
         if not index then
             --TODO auto store 2 db 测试filter的使用
-            local craftable = fluidInterface.getCraftables({name = label})
-            print(craftable)
-            error("fluid:" .. label .. " not index in db")
+            --local craftable = fluidInterface.getCraftables({name = label})
+            --print(craftable)
+            error("fluid:" .. label .. " no index in db")
         end
         local dbAddress = db.address
-        local success = fluidInterface.setFluidInterfaceConfiguration(5, dbAddress, index, 1)
+        local success = fluidInterface.setFluidInterfaceConfiguration(1, dbAddress, index, 1)
         if not success then
             error("set fluid interface failed, label:" .. label .. "db index:" .. index)
         end
@@ -45,12 +44,11 @@ function _M.transFluid(recipeFluid, inputBusSlot)
         os.sleep(10)
     end
 
-    --FIXME 有时候会从第二个slot提取
     local amount = recipeFluid.amount
     local success, transferred = fluidInput.transferFluid(fluidSourceSide, sides.top, amount)
     if not success or transferred < amount then
-        error("transfer fluid failed request amount" ..
-                tostring(amount) .. " actually transferred " .. tostring(transferred))
+        error("transfer fluid failed request amount:" ..
+                amount .. " actually transferred " .. transferred)
     end
 end
 
