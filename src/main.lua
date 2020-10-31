@@ -11,7 +11,7 @@ function Main.start()
     while true do
         local id, _, x, y = event.pullMultiple("interrupted")
         if id == "interrupted" then
-            print(os.date("%Y-%m-%d %H:%M:%S", os.time()) .. "interrupted cacel timer")
+            print("interrupted cancel timer")
             event.cancel(timer)
             break
         end
@@ -24,7 +24,7 @@ function Main.loop()
     if hasItem then
         local recipe = recipeMatcher.match(all)
         if not recipe then
-            print("no recipe match")
+            print(os.date("%Y-%m-%d %H:%M:%S", os.time()) .. "no recipe match")
             return
         end
         --start progress
