@@ -5,9 +5,11 @@ local recipeMatcher = require("recipe.matcher")
 local progress = require("recipe.Progress")
 
 local timer
+local running = false
 
 function Main.start()
-    timer = event.timer(2, Main.loop(), math.huge)
+    timer = event.timer(2, Main.loop, math.huge)
+    running = true
 end
 
 function Main.loop()
@@ -24,4 +26,15 @@ function Main.loop()
     end
 end
 
-Main.start()
+function Main.stop()
+    if timer then
+        event.cancel(timer)
+        running = false
+    end
+end
+
+if running then
+    Main.stop()
+else
+    Main.start()
+end
