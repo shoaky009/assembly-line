@@ -65,12 +65,12 @@ function _M.transCell(recipeItem, fluidSlot)
     _M.trans(recipeItem, moltenOutputSide)
 end
 
-function _M.trans(item, amount, outputSide)
-    local sourceSlot = _M.getSourceSlotByLabel(item, amount)
+function _M.trans(label, amount, outputSide)
+    local sourceSlot = _M.getSlotByLabel(label, amount, chestSourceSide)
     local outputSlot = _M.getAvailableOutputSlot(outputSide)
     local transferred = inputProxy.transferItem(chestSourceSide, outputSide, amount, sourceSlot, outputSlot)
     if transferred < amount then
-        error("not enough item:" .. item .. " " .. tostring(amount - transferred) .. " more")
+        error("not enough item:" .. label .. " " .. tostring(amount - transferred) .. " more")
     end
 end
 
@@ -92,8 +92,8 @@ function _M.getAvailableOutputSlot(side)
     end
 end
 
-function _M.getSourceSlotByLabel(label, amount)
-    local stacks = inputProxy.getAllStacks(chestSourceSide)
+function _M.getSlotByLabel(label, amount, side)
+    local stacks = inputProxy.getAllStacks(side)
     if not stacks then
         error("place check 'config.chestInput.chestSourceSide' no stacks found")
     end
@@ -132,6 +132,16 @@ function _M.suckTankFluid(slot, amount)
         --也许有些提取比较久2秒不够
         os.sleep(2)
     end
+end
+
+function _M.transOutput(slot, item)
+    local output = config.chestOutput[slot]
+    if not output then
+       error("item output " .. tostring(slot) .. "not found plz check config or disable config.chestOutputMode")
+    end
+    --默认底部和顶部
+    local sourceSlot = _M.getSlotByLabel(item[1], item.amount, chestSourceSide)
+    output.transferItem(0, 1, item.amount, sourceSlot, 1)
 end
 
 return _M

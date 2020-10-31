@@ -1,6 +1,7 @@
 local setmetatable = setmetatable
 local transport = require("recipe.transport")
 local computer = require("computer")
+local config = require("conf.config")
 
 local _M = {}
 
@@ -14,7 +15,6 @@ function _M:new(processItem)
     self.suckSlot = {}
     self.startTime = os.time()
     self.endTime = nil
-    self.transportCost = nil
     return setmetatable(self, mt)
 end
 
@@ -41,8 +41,9 @@ function _M:start()
             end
         end
         self:suckTankFluid()
-        self.transportCost = os.time() - self.startTime
-        print("all transported cost:" .. self.transportCost .. ", waiting for assembly line crafting")
+        self:toItemInputBus()
+        local cost = os.time() - self.startTime
+        print("all transported cost:" .. cost .. ", waiting for assembly line crafting")
     --end, function ()
     --    computer.beep(1000, 5)
     --end)
@@ -67,6 +68,15 @@ end
 function _M:suckTankFluid()
     for slot, amount in pairs(self.suckSlot) do
         transport.suckTankFluid(slot, amount)
+    end
+end
+
+function _M:toItemInputBus()
+    if not config.chestOutputMode then
+        return
+    end
+    for slot, item in pairs(self.processItem.items) do
+        transport.transOutput(slot, item)
     end
 end
 
