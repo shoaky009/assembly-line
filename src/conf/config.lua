@@ -29,7 +29,7 @@ config.fluidInterface4 = manager.proxy("c6529344-c66b-4600-b07b-45358e141616")
 
 --ender chest
 config.chestOutput[1] = manager.proxy("199e706b-3330-499c-81a1-f0c876ee4658")
-config.chestOutput[2] = manager.proxy("8c638858-ce5a-4c7f-918a-a080955fc48f")
+config.chestOutput[2] = manager.proxy("8c838858-ce5a-4c7f-918a-a080955fc48f")
 config.chestOutput[3] = manager.proxy("3e712349-e182-4913-97b6-4b516c910646")
 config.chestOutput[4] = manager.proxy("366c268d-49f3-4e56-bba1-23df471f1079")
 config.chestOutput[5] = manager.proxy("b6f5eb36-997e-4277-aa44-6b190bdc3015")

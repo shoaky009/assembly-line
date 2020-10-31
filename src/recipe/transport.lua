@@ -140,7 +140,7 @@ function _M.transOutput(slot, item)
        error("item output " .. tostring(slot) .. "not found plz check config or disable config.chestOutputMode")
     end
     --默认底部和顶部
-    local sourceSlot = _M.getSlotByLabel(item[1], item.amount, chestSourceSide)
+    local sourceSlot = _M.getSlotByLabel(item[1], item.amount, chestOutputSide)
     output.transferItem(0, 1, item.amount, sourceSlot, 1)
 end
 

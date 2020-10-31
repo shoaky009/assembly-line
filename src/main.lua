@@ -24,7 +24,7 @@ function Main.loop()
     if hasItem then
         local recipe = recipeMatcher.match(all)
         if not recipe then
-            print("not recipe match")
+            print("no recipe match")
             return
         end
         --start progress
