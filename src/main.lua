@@ -3,19 +3,14 @@ local event = require("event")
 local chestReader = require("chest.reader")
 local recipeMatcher = require("recipe.matcher")
 local progress = require("recipe.Progress")
-local thread = require("thread")
 
---local eventHandlers = setmetatable(
---        { ["has_item"] = recipeMatcher.match() },
---        { __index = function()
---            return Main.unknownEvent
---        end })
-local running = true
-
+local timer
 
 function Main.start()
-    --TODO timer
-    --local timer = event.timer(2, chestReader.hasItem(), 1)
+    timer = event.timer(2, Main.loop(), math.huge)
+end
+
+function Main.loop()
     local hasItem, all = chestReader.hasItem();
     if hasItem then
         local recipe = recipeMatcher.match(all)
@@ -28,17 +23,6 @@ function Main.start()
         pg:start()
         --redo
     end
-
 end
-
-function Main.unknownEvent()
-    -- do nothing if the event wasn't relevant
-end
-
---function Main.handleEvent(eventID, ...)
---    if (eventID) then
---        eventHandlers[eventID](...)
---    end
---end
 
 Main.start()
