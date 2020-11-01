@@ -34,7 +34,7 @@ R[3] = {
     nickname = "Electric Pump (LuV)",
     items = {
         { "gt.metaitem.01.32606.name", type = ITEM, amount = 1 },
-        { "gt.blockmachines.gt_pipe_niobiumtitanium_mall.name", type = ITEM, amount = 2 },
+        { "gt.blockmachines.gt_pipe_niobiumtitanium_small.name", type = ITEM, amount = 2 },
         { "gt.mataitem.01.17374.name", type = ITEM, amount = 2 },
         { "gt.mataitem.01.27374.name", type = ITEM, amount = 8 },
         { "gt.mataitem.01.28635.name", type = ITEM, amount = 4 },
