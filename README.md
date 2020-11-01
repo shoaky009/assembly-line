@@ -1,7 +1,11 @@
-
 ##如何使用
+```shell script
+wget https://gitee.com/sh0aky/assembly-line-oc/raw/master/install
+install
+```
 
 ###1.设置config.lua
+
 ####1.1设置与原材料箱子相邻的transposer地址
 ```lua
 config.chestInput.proxy = manager.proxy("your address")
@@ -99,7 +103,12 @@ config.chestOutput[13] = manager.proxy("your address")
 
 5.3 molten会按照顺序进入提取机,然后被工厂吸取到对应输入仓的流体储罐中
 
-5.4 fluid根据name会去db中查询对应的index,然后自动设置流体输出总线的对应输出流体
+5.4 fluid根据label会去db中查询对应的index,然后自动设置流体输出总线的对应输出流体
 
 5.5 cell直接到超级缸(或EnderIO的储罐)然后被工厂方块提取到输入仓
 ##参考图
+
+
+转换器相对于使用robot配置复杂,造价昂贵(相对来说 其实对iv来说都还行)
+优势在于传输快,个人感觉机器人走得太慢了所以没有用
+欢迎提出建议改进
