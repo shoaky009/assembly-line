@@ -42,8 +42,11 @@ function _M:start()
         end
         self:suckTankFluid()
         self:toItemInputBus()
-        local cost = os.time() - self.startTime
-        print("all transported cost:" .. cost .. ", waiting for assembly line crafting")
+        --因为在花园时间时间获取不了
+        --local cost = os.time() - self.startTime
+        --print("all transported cost:" .. cost .. ", waiting for assembly line crafting")
+        print("all transported, waiting for assembly line crafting")
+        --TODO 如果同时合成多个有问题,在这里检测装配线红石信号 直到熄灭
     --end, function ()
     --    computer.beep(1000, 5)
     --end)

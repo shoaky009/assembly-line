@@ -12,6 +12,7 @@ config.chestInput.chestSourceSide = sides.north
 config.chestInput.chestOutputSide = sides.south
 --molten output side
 config.chestInput.moltenOutputSide = sides.west
+config.chestInput.checkInterval = 3
 
 --fluid source side
 config.fluidSourceSide = 0

@@ -4,9 +4,11 @@ local chestReader = require("chest.reader")
 local recipeMatcher = require("recipe.matcher")
 local progress = require("recipe.Progress")
 local computer = require("computer")
+local config = require("conf.config")
 
 function Main.start()
-    local timer = event.timer(2, Main.loop, math.huge)
+    local interval = config.chestInput.checkInterval or 2
+    local timer = event.timer(interval, Main.loop, math.huge)
     while true do
         local id, _, x, y = event.pullMultiple("interrupted")
         if id == "interrupted" then
@@ -15,7 +17,6 @@ function Main.start()
             break
         end
     end
-    os.exit()
 end
 
 function Main.loop()
