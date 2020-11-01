@@ -1,0 +1,14 @@
+mkdir assembly-line
+cd assembly-line
+wget https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/main.lua
+wget https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/mamager.lua
+wget https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/mamager.lua
+mkdir chest conf recipe tools
+wget -P ./chest https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/chest/reader.lua
+wget -P ./conf https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/conf/config.lua
+wget -P ./recipe https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/recipe/matcher.lua
+wget -P ./recipe https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/recipe/Progress.lua
+wget -P ./recipe https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/recipe/recipes.lua
+wget -P ./recipe https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/recipe/transport.lua
+wget -P ./tools https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/tools/db.lua
+wget -P ./tools https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/tools/readlabel.lua
