@@ -33,12 +33,12 @@ R[2] = {
 R[3] = {
     nickname = "Electric Pump (LuV)",
     items = {
-        { "电动马达luv", type = ITEM, amount = 1 },
-        { "小型流体管道", type = ITEM, amount = 2 },
-        { "高速板", type = ITEM, amount = 2 },
-        { "高速螺丝钉", type = ITEM, amount = 8 },
-        { "硅橡胶环", type = ITEM, amount = 4 },
-        { "高速转子", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.32606.name", type = ITEM, amount = 1 },
+        { "gt.blockmachines.gt_pipe_niobiumtitanium_mall.name", type = ITEM, amount = 2 },
+        { "gt.mataitem.01.17374.name", type = ITEM, amount = 2 },
+        { "gt.mataitem.01.27374.name", type = ITEM, amount = 8 },
+        { "gt.mataitem.01.28635.name", type = ITEM, amount = 4 },
+        { "gt.mataitem.02.21374.name", type = ITEM, amount = 2 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
         { "gt.metaitem.01.30724.name", type = FLUID, amount = 250 }
