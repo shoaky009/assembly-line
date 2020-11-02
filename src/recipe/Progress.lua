@@ -78,8 +78,13 @@ function _M:toItemInputBus()
     if not config.chestOutputMode then
         return
     end
-    for slot, item in pairs(self.processItem.items) do
-        transport.transOutput(slot, item)
+    local slot = 0
+    for _, item in pairs(self.processItem.items) do
+        local type = item.type
+        if type == "type" or type == nil then
+            slot = slot + 1
+            transport.transOutput(slot, item)
+        end
     end
 end
 
