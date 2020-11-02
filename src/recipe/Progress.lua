@@ -81,7 +81,7 @@ function _M:toItemInputBus()
     local slot = 0
     for _, item in pairs(self.processItem.items) do
         local type = item.type
-        if type == "type" or type == nil then
+        if type == "item" or type == nil then
             slot = slot + 1
             transport.transOutput(slot, item)
         end
