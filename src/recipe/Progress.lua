@@ -40,6 +40,7 @@ function _M:start()
                 self:transRecipeCell(v, fluidSlot)
             end
         end
+        self:waitInTank(fluidSlot)
         self:suckTankFluid()
         self:toItemInputBus()
         --因为在花园时间时间获取不了
@@ -79,11 +80,22 @@ function _M:toItemInputBus()
         return
     end
     local slot = 0
-    for _, item in pairs(self.processItem.items) do
+    for _, item in pairs(self.items) do
         local type = item.type
         if type == "item" or type == nil then
             slot = slot + 1
             transport.transOutput(slot, item)
+        end
+    end
+end
+
+function _M:waitInTank(maxSlot)
+    --TODO 同时检测所有槽位 如果都等于才释放
+    for i = 1, maxSlot do
+        local amount = transport.getTankFluid(i).amount
+        local need = self.suckSlot[i]
+        if need == amount then
+
         end
     end
 end

@@ -144,4 +144,10 @@ function _M.transOutput(slot, item)
     output.transferItem(0, 1, item.amount, sourceSlot, 1)
 end
 
+function _M.getTankFluid(slot)
+    local input = _M.getFluidProxyBySlot(slot)
+    local fluid = input.getFluidInTank(tankSourceSide)
+    return fluid[1]
+end
+
 return _M
