@@ -64,13 +64,14 @@ R[4] = {
 R[5] = {
     nickname = "Conveyor Module (LuV)",
     items = {
-        { "电动马达luv", type = ITEM, amount = 2 },
-        { "高速钢-G板", type = ITEM, amount = 2 },
-        { "高速钢-G环", type = ITEM, amount = 4 },
-        { "高速钢-G垫片", type = ITEM, amount = 32 },
-        { "钇钡铜氧合金线缆", type = ITEM, amount = 2 },
-        { "熔融橡胶", type = MOLTEN, amount = 10, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250 }
+        { "gt.metaitem.01.32606.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.17374.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.28374.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.25374.name", type = ITEM, amount = 32 },
+        { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250 },
+        { "gt.metaitem.01.11635.name", type = MOLTEN, amount = 10, times = 144 }
     }
 }
 
