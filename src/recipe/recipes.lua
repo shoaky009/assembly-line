@@ -35,10 +35,10 @@ R[3] = {
     items = {
         { "gt.metaitem.01.32606.name", type = ITEM, amount = 1 },
         { "gt.blockmachines.gt_pipe_niobiumtitanium_small.name", type = ITEM, amount = 2 },
-        { "gt.mataitem.01.17374.name", type = ITEM, amount = 2 },
-        { "gt.mataitem.01.27374.name", type = ITEM, amount = 8 },
-        { "gt.mataitem.01.28635.name", type = ITEM, amount = 4 },
-        { "gt.mataitem.02.21374.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.17374.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.27374.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.28635.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.02.21374.name", type = ITEM, amount = 2 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
         { "gt.metaitem.01.30724.name", type = FLUID, amount = 250 }
