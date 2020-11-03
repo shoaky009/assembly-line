@@ -112,7 +112,7 @@ function _M:checkTank(slot)
     while true do
         local current = transport.getTankFluid(slot).amount
         local need = self.suckSlot[slot]
-        if current == need then
+        if current >= need then
             return true
         end
         coroutine.yield(false)
