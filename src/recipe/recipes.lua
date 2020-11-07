@@ -26,7 +26,7 @@ R[2] = {
         { "细钌铱合金导线", type = ITEM, amount = 64 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricatn"  }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricant"  }
     }
 }
 
@@ -41,7 +41,7 @@ R[3] = {
         { "gt.metaitem.02.21374.name", type = ITEM, amount = 2 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricatn" }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricant" }
     }
 }
 
@@ -53,11 +53,11 @@ R[4] = {
         { "gt.metaitem.01.28374.name", type = ITEM, amount = 4 },
         { "gt.metaitem.01.25374.name", type = ITEM, amount = 32 },
         { "gt.metaitem.01.23374.name", type = ITEM, amount = 4 },
-        { "gt.metaitem.01.31374.name", type = ITEM, amount = 1 },
-        { "gt.metaitem.01.20374.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.02.31374.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.02.20374.name", type = ITEM, amount = 2 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 4 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricatn" }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricant" }
     }
 }
 
@@ -78,17 +78,17 @@ R[5] = {
 R[6] = {
     nickname = "Robot Arm (LuV)",
     items = {
-        { "长高速钢-G杆", type = ITEM, amount = 4 },
-        { "高速钢-G齿轮", type = ITEM, amount = 1 },
-        { "小型高速钢-G齿轮", type = ITEM, amount = 3 },
-        { "电动马达(LuV)", type = ITEM, amount = 2 },
-        { "电力活塞(LuV)", type = ITEM, amount = 1 },
-        { "纳米处理器主机", type = ITEM, amount = 2 },
-        { "处理器主机", type = ITEM, amount = 2 },
-        { "高级电路板", type = ITEM, amount = 6 },
+        { "gt.metaitem.01.23374.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.02.31374.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.02.20374.name", type = ITEM, amount = 3 },
+        { "gt.metaitem.01.32606.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.32645.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.03.32087.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32086.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32085.name", type = ITEM, amount = 6 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 6 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 4, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricatn"  }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricant"  }
     }
 }
 
