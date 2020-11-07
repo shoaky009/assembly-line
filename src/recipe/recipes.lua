@@ -48,16 +48,16 @@ R[3] = {
 R[4] = {
     nickname = "Electric Piston (LuV)",
     items = {
-        { "电动马达luv", type = ITEM, amount = 1 },
-        { "高速钢-E板", type = ITEM, amount = 6 },
-        { "高速钢-E环", type = ITEM, amount = 4 },
-        { "高速钢-E垫片", type = ITEM, amount = 32 },
-        { "高速钢-E杆", type = ITEM, amount = 4 },
-        { "高速钢-E齿轮", type = ITEM, amount = 1 },
-        { "小型高速钢-E齿轮", type = ITEM, amount = 2 },
-        { "4x钒镓合金线缆", type = ITEM, amount = 4 },
-        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 2, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "fluid.lubricatn" }
+        { "gt.metaitem.01.32606.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.17374.name", type = ITEM, amount = 6 },
+        { "gt.metaitem.01.28374.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.25374.name", type = ITEM, amount = 32 },
+        { "gt.metaitem.01.23374.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.31374.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.20374.name", type = ITEM, amount = 2 },
+        { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricatn" }
     }
 }
 
