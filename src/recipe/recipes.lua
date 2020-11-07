@@ -26,7 +26,7 @@ R[2] = {
         { "细钌铱合金导线", type = ITEM, amount = 64 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250 }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricatn"  }
     }
 }
 
@@ -41,7 +41,7 @@ R[3] = {
         { "gt.metaitem.02.21374.name", type = ITEM, amount = 2 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250 }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricatn" }
     }
 }
 
@@ -57,7 +57,7 @@ R[4] = {
         { "小型高速钢-E齿轮", type = ITEM, amount = 2 },
         { "4x钒镓合金线缆", type = ITEM, amount = 4 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 2, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750 }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "fluid.lubricatn" }
     }
 }
 
@@ -71,7 +71,7 @@ R[5] = {
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
         { "gt.metaitem.01.30724.name", type = FLUID, amount = 250 },
-        { "gt.metaitem.01.11635.name", type = MOLTEN, amount = 10, times = 144 }
+        { "gt.metaitem.99.635.name", type = FLUID, amount = 1440, cname = "fluid.molten.styrenebutadienerubber"}
     }
 }
 
@@ -88,7 +88,7 @@ R[6] = {
         { "高级电路板", type = ITEM, amount = 6 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 6 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 4, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250 }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricatn"  }
     }
 }
 

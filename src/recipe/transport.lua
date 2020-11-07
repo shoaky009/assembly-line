@@ -24,8 +24,9 @@ function _M.transFluid(recipeFluid, inputBusSlot)
 
     local conf = fluidInterface.getFluidInterfaceConfiguration(1)
     local label = recipeFluid[1]
+    local cname = recipeFluid.cname
     --配置与配方不一样或者没有
-    if not conf or not conf.label == label then
+    if not conf or conf.label ~= cname then
         --set all config the same
         local db = manager.getFluidDatabase()
         local index = manager.getFluidIndexByLabel(label)
@@ -35,8 +36,11 @@ function _M.transFluid(recipeFluid, inputBusSlot)
             --print(craftable)
             error("fluid:" .. label .. " no index in db")
         end
-        local dbAddress = db.address
-        local success = fluidInterface.setFluidInterfaceConfiguration(1, dbAddress, index, 1)
+        print("set fluid interface slot:" .. inputBusSlot .. " label:" .. label)
+        if conf then
+            print(conf.label)
+        end
+        local success = fluidInterface.setFluidInterfaceConfiguration(1, db.address, index)
         if not success then
             error("set fluid interface failed, label:" .. label .. "db index:" .. index)
         end
