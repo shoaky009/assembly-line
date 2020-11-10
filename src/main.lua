@@ -9,6 +9,7 @@ local config = require("conf.config")
 function Main.start()
     local interval = config.chestInput.checkInterval or 2
     local timer = event.timer(interval, Main.loop, math.huge)
+    print("started!")
     while true do
         local id, _, x, y = event.pullMultiple("interrupted")
         if id == "interrupted" then

@@ -13,9 +13,9 @@ function _M.match(sourceItems)
         if label then
             local var0 = source[label]
             if var0 then
-                source[label] = var0 + 1
+                source[label] = var0 + v.size
             else
-                source[label] = 1
+                source[label] = v.size
             end
         else
             break
@@ -24,8 +24,9 @@ function _M.match(sourceItems)
 
     for _, v in pairs(r) do
         local flag = true
-        for __, item in ipairs(v.items) do
-            if item.type ~= "fluid" and not source[item[1]] then
+        for __, item in pairs(v.items) do
+            local sourceAmount = source[item[1]]
+            if item.type ~= "fluid" and (not sourceAmount or item.amount > sourceAmount) then
                 flag = false
                 break
             end
