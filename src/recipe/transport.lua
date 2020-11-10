@@ -31,7 +31,6 @@ function _M.transFluid(recipeFluid, inputBusSlot)
         local db = manager.getFluidDatabase()
         local index = manager.getFluidIndexByLabel(label)
         if not index then
-            --TODO auto store 2 db 测试filter的使用
             --local craftable = fluidInterface.getCraftables({name = label})
             --print(craftable)
             error("fluid:" .. label .. " no index in db")
@@ -142,6 +141,16 @@ function _M.transOutput(slot, item)
     local output = config.chestOutput[slot]
     if not output then
        error("item output " .. tostring(slot) .. "not found plz check config or disable config.chestOutputMode")
+    end
+
+    while true do
+        local stack = output.getStackInSlot(1, 1)
+        if not stack or (stack.label == item[1] and stack.size + item.amount < 64) then
+            break
+        end
+        print("waiting available slot recipe:" .. item[1] .. " need:" .. item.amount ..
+                " ,slotItem:" .. stack.label .. " size:" .. stack.size)
+        os.sleep(1)
     end
     --默认底部和顶部
     local sourceSlot = _M.getSlotByLabel(item[1], item.amount, chestOutputSide)

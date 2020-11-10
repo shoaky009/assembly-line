@@ -5,7 +5,6 @@ local MOLTEN = "molten"
 local FLUID = "fluid"
 local CELL = "cell"
 
---TODO add recipes
 R[1] = {
     nickname = "Heavy-DutyAlloyIngotT4",
     items = {

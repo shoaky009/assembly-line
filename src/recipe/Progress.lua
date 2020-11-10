@@ -78,7 +78,6 @@ function _M:toItemInputBus()
     for _, item in pairs(self.items) do
         local type = item.type
         if type == "item" or type == nil then
-            --TODO 检查输入总线当前物品数量,如果amount+当前数量大于64 暂停
             slot = slot + 1
             transport.transOutput(slot, item)
         end
