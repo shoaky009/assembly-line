@@ -94,14 +94,14 @@ R[6] = {
 R[7] = {
     nickname = "Sensor (LuV)",
     items = {
-        { "高速钢-G框架", type = ITEM, amount = 1 },
-        { "传感器(IV)", type = ITEM, amount = 1 },
-        { "传感器(EV)", type = ITEM, amount = 2 },
-        { "传感器(HV)", type = ITEM, amount = 4 },
-        { "高级电路板", type = ITEM, amount = 7 },
-        { "琥珀金箔", type = ITEM, amount = 64 },
-        { "琥珀金箔", type = ITEM, amount = 64 },
-        { "琥珀金箔", type = ITEM, amount = 64 },
+        { "gt.blockmachines.gt_frame_hsss.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.32606.name", type = ITEM, amount = 1},
+        { "钌铱合金杆", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.32725.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.03.32087.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.29037.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29037.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29037.name", type = ITEM, amount = 64 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 7 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 4, times = 144 }
     }
