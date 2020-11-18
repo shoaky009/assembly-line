@@ -96,7 +96,7 @@ R[7] = {
     items = {
         { "gt.blockmachines.gt_frame_hsss.name", type = ITEM, amount = 1 },
         { "gt.metaitem.01.32606.name", type = ITEM, amount = 1},
-        { "钌铱合金杆", type = ITEM, amount = 8 },
+        { "钌铱合金板", type = ITEM, amount = 8 },
         { "gt.metaitem.01.32725.name", type = ITEM, amount = 1 },
         { "gt.metaitem.03.32087.name", type = ITEM, amount = 4 },
         { "gt.metaitem.01.29037.name", type = ITEM, amount = 64 },
