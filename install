@@ -1,14 +1,29 @@
-mkdir assembly-line
-cd assembly-line
-wget https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/main.lua
-wget https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/mamager.lua
-wget https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/mamager.lua
-mkdir chest conf recipe tools
-wget -P ./chest https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/chest/reader.lua
-wget -P ./conf https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/conf/config.lua
-wget -P ./recipe https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/recipe/matcher.lua
-wget -P ./recipe https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/recipe/Progress.lua
-wget -P ./recipe https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/recipe/recipes.lua
-wget -P ./recipe https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/recipe/transport.lua
-wget -P ./tools https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/tools/db.lua
-wget -P ./tools https://gitee.com/sh0aky/assembly-line-oc/raw/master/src/tools/readlabel.lua
+local shell = require "shell"
+local default_repo = "https://gitee.com/sh0aky/assembly-line-oc/raw"
+
+local args, _ = shell.parse()
+local repo;
+if type(args) == "table" then
+    print(args[1])
+    repo = args[1] or default_repo
+else
+    repo = default_repo
+end
+
+shell.execute("rm -rf ./assembly-line")
+shell.execute("mkdir assembly-line")
+shell.execute("cd assembly-line")
+local prefix = "wget " .. repo
+shell.execute(prefix .. "/master/src/main.lua")
+shell.execute(prefix .. "/master/src/manager.lua")
+shell.execute("mkdir chest conf recipe tools")
+shell.execute("wget -P ./chest " .. repo .. "/master/src/chest/reader.lua")
+shell.execute("wget -P ./conf " .. repo .. "/master/src/conf/config.lua")
+shell.execute("wget -P ./recipe " .. repo .. "/master/src/recipe/matcher.lua")
+shell.execute("wget -P ./recipe " .. repo .. "/master/src/recipe/Progress.lua")
+shell.execute("wget -P ./recipe " .. repo .. "/master/src/recipe/recipes.lua")
+shell.execute("wget -P ./recipe " .. repo .. "/master/src/recipe/transport.lua")
+shell.execute("wget -P ./tools " .. repo .. "/master/src/tools/db.lua")
+shell.execute("wget -P ./tools " .. repo .. "/master/src/tools/readlabel.lua")
+
+print("installed successfully, plz read README.md and edit conf/config.lua make it work")
