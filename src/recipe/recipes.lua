@@ -126,15 +126,15 @@ R[8] = {
 R[9] = {
     nickname = "Field Generator (LuV)",
     items = {
-        { "高速钢-G框架", type = ITEM, amount = 1 },
-        { "高速钢-G板", type = ITEM, amount = 6 },
-        { "量子之星", type = ITEM, amount = 1 },
-        { "发射器(LuV)", type = ITEM, amount = 4 },
-        { "纳米处理器主机", type = ITEM, amount = 8 },
-        { "精制锇线缆", type = ITEM, amount = 64 },
-        { "精制锇线缆", type = ITEM, amount = 64 },
-        { "精制锇线缆", type = ITEM, amount = 64 },
-        { "精制锇线缆", type = ITEM, amount = 64 },
+        { "gt.blockmachines.gt_frame_hsss.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.17374.name", type = ITEM, amount = 6 },
+        { "gt.metaitem.01.32725.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.32685.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.03.32088.name", type = ITEM, amount = 4 },
+        { "细钌铱合金导线", type = ITEM, amount = 64 },
+        { "细钌铱合金导线", type = ITEM, amount = 64 },
+        { "细钌铱合金导线", type = ITEM, amount = 64 },
+        { "细钌铱合金导线", type = ITEM, amount = 64 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 8 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 4, times = 144 }
     }
