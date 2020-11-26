@@ -140,6 +140,22 @@ R[9] = {
     }
 }
 
+R[10] = {
+    nickname = "Energy Hatch (LuV)",
+    items = {
+        { "gt.blockmachines.hull.tier.06.name", type = ITEM, amount = 1 },
+        { "gt.blockmachines.wire.superconductorluv.01.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32059.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32087.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32146.name", type = ITEM, amount = 2 },
+        { "gt.180k_helium_Coolantcell.name", type = ITEM, amount = 1 },
+        { "gt.180k_helium_Coolantcell.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.32615.name", type = ITEM, amount = 1 },
+        { "Coolant Cell", type = CELL, amount = 2 },
+        { "gt.metaitem.01.23314.name", type = MOLTEN, amount = 10, times = 72 }
+    }
+}
+
 function _M.getRecipes()
     return R
 end
