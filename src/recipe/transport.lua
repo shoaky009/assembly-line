@@ -65,7 +65,7 @@ end
 
 function _M.transCell(recipeItem, fluidSlot)
     --cell到熔物品的超级缸输出缓冲
-    _M.trans(recipeItem, moltenOutputSide)
+    _M.trans(recipeItem[1], recipeItem.amount, moltenOutputSide)
 end
 
 function _M.trans(label, amount, outputSide)
