@@ -5,7 +5,7 @@ local recipeMatcher = require("recipe.matcher")
 local progress = require("recipe.Progress")
 local computer = require("computer")
 local config = require("conf.config")
-local processing = false
+local rs = require("component").redstone
 
 function Main.start()
     local interval = config.chestInput.checkInterval or 2
@@ -22,10 +22,10 @@ function Main.start()
 end
 
 function Main.loop()
-    if processing then
+    if rs.getInput(3) > 0 then
+        print("processing item...")
         return
     end
-    --TODO 改成生产消费模型
     local hasItem, all = chestReader.hasItem();
     if hasItem then
         local recipe = recipeMatcher.match(all)
@@ -33,18 +33,16 @@ function Main.loop()
             print(computer.uptime() .. "no recipe match")
             return
         end
-        --start progress
-        processing = true
         local pg = progress:new(recipe)
-        xpcall(pg:start(), function (err)
-            local item = recipe.nickname or "unknown item"
-            print("an exception occurred while processing the" .. item)
-            print("ERROR:", err)
-            --beeeeeeee
-            os.exit()
-        end)
-        processing = false
+        xpcall(pg:start(), Main.error(recipe))
     end
+end
+
+function Main.error(recipe)
+    local item = recipe.nickname or "unknown item"
+    print("an exception occurred while processing the " .. item)
+    debug.traceback()
+    os.exit()
 end
 
 Main.start()

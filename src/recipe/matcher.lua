@@ -17,8 +17,8 @@ function _M.match(sourceItems)
             else
                 source[label] = v.size
             end
-        else
-            break
+        --else
+        --    break
         end
     end
 
