@@ -43,7 +43,7 @@ function _M.transFluid(recipeFluid, inputBusSlot)
         if not success then
             error("set fluid interface failed, label:" .. label .. "db index:" .. index)
         end
-        --后面优化这部分 因为transferFluid不能提取指定槽位
+        --TODO 后面优化这部分 因为transferFluid不能提取指定槽位
         os.sleep(10)
     end
 

@@ -88,6 +88,7 @@ function _M:waiting4Fluid(maxSlot)
     local coroutines = {}
     print("maxSlot:" .. maxSlot)
     for i = 1, maxSlot do
+        -- 创建maxSlot个coroutine
         local co = coroutine.create(function (slot, amount)
             while true do
                 local current = transport.getTankFluid(slot).amount
@@ -101,10 +102,11 @@ function _M:waiting4Fluid(maxSlot)
         table.insert(coroutines, i, co)
     end
 
+    --FIXME concurrent
     repeat
         ::continue::
         for i, v in pairs(coroutines) do
-            local status, value = coroutine.resume(v, i, self.suckSlot[i])
+            local _, value = coroutine.resume(v, i, self.suckSlot[i])
             if value == false or not coroutine.status(v) == "dead" then
                 os.sleep(0.2)
                 goto continue
