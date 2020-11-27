@@ -5,6 +5,7 @@ local recipeMatcher = require("recipe.matcher")
 local progress = require("recipe.Progress")
 local computer = require("computer")
 local config = require("conf.config")
+local processing = false
 
 function Main.start()
     local interval = config.chestInput.checkInterval or 2
@@ -21,6 +22,10 @@ function Main.start()
 end
 
 function Main.loop()
+    if processing then
+        return
+    end
+    --TODO 改成生产消费模型
     local hasItem, all = chestReader.hasItem();
     if hasItem then
         local recipe = recipeMatcher.match(all)
@@ -29,14 +34,16 @@ function Main.loop()
             return
         end
         --start progress
+        processing = true
         local pg = progress:new(recipe)
         xpcall(pg:start(), function (err)
             local item = recipe.nickname or "unknown item"
-            --TODO reset inputs
             print("an exception occurred while processing the" .. item)
             print("ERROR:", err)
+            --beeeeeeee
+            os.exit()
         end)
-
+        processing = false
     end
 end
 
