@@ -32,6 +32,7 @@ function Main.loop()
         local pg = progress:new(recipe)
         xpcall(pg:start(), function (err)
             local item = recipe.nickname or "unknown item"
+            --TODO reset inputs
             print("an exception occurred while processing the" .. item)
             print("ERROR:", err)
         end)
