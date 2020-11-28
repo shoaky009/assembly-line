@@ -34,7 +34,8 @@ function Main.loop()
             return
         end
         local pg = progress:new(recipe)
-        xpcall(pg:start(), Main.error(recipe))
+        pg:start()
+        --xpcall(pg:start(), Main.error(recipe))
     end
 end
 
@@ -42,7 +43,6 @@ function Main.error(recipe)
     local item = recipe.nickname or "unknown item"
     print("an exception occurred while processing the " .. item)
     debug.traceback()
-    os.exit()
 end
 
 Main.start()

@@ -109,7 +109,7 @@ function _M.getSlotByLabel(label, amount, side)
             end
         end
     end
-    error("no item " .. label .. "in source chest")
+    error("no item " .. label .. " in source chest")
 end
 
 function _M.suckTankFluid(slot, amount)
