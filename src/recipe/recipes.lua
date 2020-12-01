@@ -77,14 +77,14 @@ R[5] = {
 R[6] = {
     nickname = "Robot Arm (LuV)",
     items = {
-        { "gt.metaitem.01.23374.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.02.22374.name", type = ITEM, amount = 4 },
         { "gt.metaitem.02.31374.name", type = ITEM, amount = 1 },
         { "gt.metaitem.02.20374.name", type = ITEM, amount = 3 },
         { "gt.metaitem.01.32606.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.32645.name", type = ITEM, amount = 1 },
         { "gt.metaitem.03.32087.name", type = ITEM, amount = 2 },
-        { "gt.metaitem.03.32086.name", type = ITEM, amount = 2 },
-        { "gt.metaitem.03.32085.name", type = ITEM, amount = 6 },
+        { "gt.metaitem.03.32086.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.03.32085.name", type = ITEM, amount = 8 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 6 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 4, times = 144 },
         { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricant"  }
@@ -145,6 +145,22 @@ R[10] = {
     items = {
         { "gt.blockmachines.hull.tier.06.name", type = ITEM, amount = 1 },
         { "gt.blockmachines.wire.superconductorluv.01.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32059.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32087.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32146.name", type = ITEM, amount = 2 },
+        { "gt.180k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
+        { "gt.180k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.32615.name", type = ITEM, amount = 1 },
+        { "Coolant Cell", type = CELL, amount = 2 },
+        { "gt.metaitem.01.23314.name", type = MOLTEN, amount = 10, times = 72 }
+    }
+}
+
+R[11] = {
+    nickname = "Dynamo Hatch (LuV)",
+    items = {
+        { "gt.blockmachines.hull.tier.06.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.02.24991.name", type = ITEM, amount = 2 },
         { "gt.metaitem.03.32059.name", type = ITEM, amount = 2 },
         { "gt.metaitem.03.32087.name", type = ITEM, amount = 2 },
         { "gt.metaitem.03.32146.name", type = ITEM, amount = 2 },

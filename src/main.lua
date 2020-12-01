@@ -6,6 +6,7 @@ local progress = require("recipe.Progress")
 local computer = require("computer")
 local config = require("conf.config")
 local rs = require("component").redstone
+processing = false
 
 function Main.start()
     local interval = config.chestInput.checkInterval or 2
@@ -22,7 +23,7 @@ function Main.start()
 end
 
 function Main.loop()
-    if rs.getInput(3) > 0 then
+    if processing or rs.getInput(3) > 0 then
         print("processing item...")
         return
     end
@@ -34,7 +35,9 @@ function Main.loop()
             return
         end
         local pg = progress:new(recipe)
+        processing = true
         pg:start()
+        processing = false
         --xpcall(pg:start(), Main.error(recipe))
     end
 end

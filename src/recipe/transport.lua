@@ -109,7 +109,7 @@ function _M.getSlotByLabel(label, amount, side)
             end
         end
     end
-    error("no item " .. label .. " in source chest")
+    print("no item " .. label .. " in source chest")
 end
 
 function _M.suckTankFluid(slot, amount)
@@ -145,7 +145,7 @@ function _M.transOutput(slot, item)
 
     while true do
         local stack = output.getStackInSlot(1, 1)
-        if not stack or (stack.label == item[1] and stack.size + item.amount < 64) then
+        if not stack or (stack.label == item[1] and stack.size + item.amount <= 64) then
             break
         end
         print("waiting available slot recipe:" .. item[1] .. " need:" .. item.amount ..
