@@ -38,14 +38,8 @@ function Main.loop()
         processing = true
         pg:start()
         processing = false
-        --xpcall(pg:start(), Main.error(recipe))
     end
 end
 
-function Main.error(recipe)
-    local item = recipe.nickname or "unknown item"
-    print("an exception occurred while processing the " .. item)
-    debug.traceback()
-end
 
 Main.start()

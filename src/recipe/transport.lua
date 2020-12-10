@@ -148,7 +148,7 @@ function _M.transOutput(slot, item)
         if not stack or (stack.label == item[1] and stack.size + item.amount <= 64) then
             break
         end
-        print("waiting available slot recipe:" .. item[1] .. " need:" .. item.amount ..
+        print("waiting for available slot, recipe:" .. item[1] .. " need:" .. item.amount ..
                 " ,slotItem:" .. stack.label .. " size:" .. stack.size)
         os.sleep(1)
     end
