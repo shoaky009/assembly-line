@@ -1,7 +1,7 @@
 ##如何使用
 ```shell script
-wget https://gitee.com/sh0aky/assembly-line-oc/raw/master/install
-install
+wget https://gitee.com/sh0aky/assembly-line/raw/master/script
+
 ```
 
 ###1.设置config.lua
