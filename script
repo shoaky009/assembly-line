@@ -11,18 +11,22 @@ end
 
 shell.execute("rm -rf ./assembly-line")
 shell.execute("mkdir assembly-line")
+local pwd = shell.getWorkingDirectory()
+local dir = pwd .. "/assembly-line"
+shell.setWorkingDirectory(dir)
 local prefix = "wget " .. repo
-shell.execute("wget -P ./assembly-line" .. prefix .. "/master/src/main.lua")
-shell.execute("wget -P ./assembly-line" .. prefix .. "/master/src/manager.lua")
-shell.execute("wget -P ./assembly-line" .. prefix .. "/master/src/check-config.lua")
+shell.execute("wget" .. prefix .. "/master/src/main.lua")
+shell.execute("wget" .. prefix .. "/master/src/manager.lua")
+shell.execute("wget" .. prefix .. "/master/src/check-config.lua")
+
 shell.execute("mkdir chest conf recipe tools")
-shell.execute("wget -P ./assembly-line/chest " .. repo .. "/master/src/chest/reader.lua")
-shell.execute("wget -P ./assembly-line/conf " .. repo .. "/master/src/conf/config.lua")
-shell.execute("wget -P ./assembly-line/recipe " .. repo .. "/master/src/recipe/matcher.lua")
-shell.execute("wget -P ./assembly-line/recipe " .. repo .. "/master/src/recipe/Progress.lua")
-shell.execute("wget -P ./assembly-line/recipe " .. repo .. "/master/src/recipe/recipes.lua")
-shell.execute("wget -P ./assembly-line/recipe " .. repo .. "/master/src/recipe/transport.lua")
-shell.execute("wget -P ./assembly-line/tools " .. repo .. "/master/src/tools/db.lua")
-shell.execute("wget -P ./assembly-line/tools " .. repo .. "/master/src/tools/readlabel.lua")
+shell.execute("wget " .. repo .. "/master/src/chest/reader.lua " .. dir .. "/chest/reader.lua")
+shell.execute("wget " .. repo .. "/master/src/conf/config.lua "  .. dir .. "/conf/config.lua")
+shell.execute("wget " .. repo .. "/master/src/recipe/matcher.lua"   .. dir .. "/recipe/matcher.lua")
+shell.execute("wget " .. repo .. "/master/src/recipe/Progress.lua"   .. dir .. "/recipe/Progress.lua")
+shell.execute("wget " .. repo .. "/master/src/recipe/recipes.lua"  .. dir .. "/recipe/recipes.lua")
+shell.execute("wget " .. repo .. "/master/src/recipe/transport.lua"  .. dir .. "/recipe/transport.lua")
+shell.execute("wget " .. repo .. "/master/src/tools/db.lua"  .. dir .. "/tools/db.lua")
+shell.execute("wget " .. repo .. "/master/src/tools/readlabel.lua"  .. dir .. "/tools/readlabel.lua")
 
 print("installed successfully! plz read https://github.com/shoaky009/assembly-line/blob/master/README.md, and edit conf/config.lua make it work")
