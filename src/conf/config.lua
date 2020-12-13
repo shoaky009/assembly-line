@@ -25,7 +25,7 @@ config.fluidInput4 = manager.proxy("924b47c1-78e8-4a2b-918e-7676da1dcffb")
 --me fluid interfaces
 config.fluidInterface1 = manager.proxy("79b956a5-fa6f-4520-a8fc-66b3f316e690")
 config.fluidInterface2 = manager.proxy("85f09a86-897e-43cd-9355-d84b6060fdf2")
-config.fluidInterface3 = manager.proxy("b329aa0a-8d8b-4434-8d2c-82tacbeebec0")
+config.fluidInterface3 = manager.proxy("b329aa0a-8d8b-4434-8d2c-827ac6ee6ec0")
 config.fluidInterface4 = manager.proxy("c6529344-c66b-4600-b07b-45358e141616")
 
 --ender chest
