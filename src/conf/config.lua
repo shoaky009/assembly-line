@@ -6,7 +6,7 @@ local config = {
 local manager = require("manager")
 local sides = require("sides")
 
-config.chestInput.proxy = manager.proxy("638fb0c6-b7a6-4ef3-b0ee-da57ebe3f350")
+config.chestInput.proxy = manager.proxy("638fb0c6-b7a6-4ef3-b0ee-da57ebe3f35c")
 --me interface chest
 config.chestInput.chestSourceSide = sides.north
 config.chestInput.chestOutputSide = sides.south
@@ -20,7 +20,7 @@ config.tankSourceSide = sides.west
 config.fluidInput1 = manager.proxy("302cb9bd-0aaa-49e4-a137-03f357daa17e")
 config.fluidInput2 = manager.proxy("fc825e6a-ce6c-4893-84d7-c152c3e521de")
 config.fluidInput3 = manager.proxy("820c479c-6d6c-423f-bb26-1d3ceaea6b54")
-config.fluidInput4 = manager.proxy("924b47c1-78e8-4a2b-91be-7676da1dcffb")
+config.fluidInput4 = manager.proxy("924b47c1-78e8-4a2b-918e-7676da1dcffb")
 
 --me fluid interfaces
 config.fluidInterface1 = manager.proxy("79b956a5-fa6f-4520-a8fc-66b3f316e690")
@@ -29,7 +29,7 @@ config.fluidInterface3 = manager.proxy("b329aa0a-8d8b-4434-8d2c-82tacbeebec0")
 config.fluidInterface4 = manager.proxy("c6529344-c66b-4600-b07b-45358e141616")
 
 --ender chest
-config.chestOutput[1] = manager.proxy("896fe0aa-0b3d-44fb-a6a4-cf5940ae1ale")
+config.chestOutput[1] = manager.proxy("896fe0aa-0b3d-44fb-a6a4-cf5940ae1a1e")
 config.chestOutput[2] = manager.proxy("5fdd9694-f0e9-4613-ac5d-f44afc1c4a91")
 config.chestOutput[3] = manager.proxy("45dc91ff-2ef9-4412-a17e-892542e4f00f")
 config.chestOutput[4] = manager.proxy("7c824c05-69b5-4e76-ac4b-1646e6a4685e")
