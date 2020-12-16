@@ -30,18 +30,18 @@ config.fluidSourceSide = sides.bottom
 ####1.6设置4个流体transposer的地址
 >序号代表装配线配方中对应的位置
 ```lua
-config.fluidInput1 = manager.proxy("your address")
-config.fluidInput2 = manager.proxy("your address")
-config.fluidInput3 = manager.proxy("your address")
-config.fluidInput4 = manager.proxy("your address")
+config.fluidInput[1] = manager.proxy("your address")
+config.fluidInput[2] = manager.proxy("your address")
+config.fluidInput[3] = manager.proxy("your address")
+config.fluidInput[4] = manager.proxy("your address")
 ```
 ####1.7设置4个ME流体接口的地址
 >序号代表装配线配方中对应的位置
 ```lua
-config.fluidInterface1 = manager.proxy("your address")
-config.fluidInterface2 = manager.proxy("your address")
-config.fluidInterface3 = manager.proxy("your address")
-config.fluidInterface4 = manager.proxy("your address")
+config.fluidInterface[1] = manager.proxy("your address")
+config.fluidInterface[2] = manager.proxy("your address")
+config.fluidInterface[3] = manager.proxy("your address")
+config.fluidInterface[4] = manager.proxy("your address")
 ```
 
 ####1.8如果要用oc把原料送到输入总线,需要放末影箱在输入总线下并且所有都在同一频道

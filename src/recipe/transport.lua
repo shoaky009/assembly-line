@@ -48,7 +48,7 @@ function _M.transFluid(recipeFluid, inputBusSlot)
     end
 
     local amount = recipeFluid.amount
-    local success, transferred = fluidInput.transferFluid(fluidSourceSide, sides.top, amount)
+    local success, transferred = fluidInput.transferFluid(fluidSourceSide, config.tankSourceSide, amount)
     if not success or transferred < amount then
         error("transfer fluid failed request amount:" ..
                 amount .. " actually transferred " .. transferred)
@@ -78,11 +78,11 @@ function _M.trans(label, amount, outputSide)
 end
 
 function _M.getFluidProxyBySlot(inputBusSlot)
-    return config["fluidInput" .. tostring(inputBusSlot)]
+    return config.fluidInput[inputBusSlot]
 end
 
 function _M.getFluidInterfaceProxyBySlot(inputBusSlot)
-    return config["fluidInterface" .. tostring(inputBusSlot)]
+    return config.fluidInterface[inputBusSlot]
 end
 
 function _M.getAvailableOutputSlot(side)
