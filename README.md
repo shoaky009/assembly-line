@@ -1,4 +1,6 @@
 ##如何使用
+>推荐fork仓库之后修改完配置文件提交到远程仓库,
+>然后通过脚本拉取增加效率
 ```shell script
 #在os中运行下载以下脚本
 wget https://gitee.com/sh0aky/assembly-line/raw/master/script
