@@ -1,7 +1,14 @@
 ##如何使用
 ```shell script
+#在os中运行下载以下脚本
 wget https://gitee.com/sh0aky/assembly-line/raw/master/script
-
+#运行默认拉取的仓库是https://gitee.com/sh0aky/assembly-line 
+#github经过测试经常有些文件下载失败 如果服务器在国外可以考虑
+#如果fork了想要拉取自己的仓库在script后面添加自己的仓库前缀
+#e.g. 自定义仓库 script https://gitee.com/xxxxx/assembly-line/raw
+#e.g. 自定义仓库和分支 script https://gitee.com/xxxxx/assembly-line/raw xxxx
+#e.g. github script https://raw.githubusercontent.com/shoaky009/assembly-line xxxx
+script
 ```
 
 ###1.设置config.lua
