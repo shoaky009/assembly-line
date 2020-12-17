@@ -25,7 +25,7 @@ R[2] = {
         { "细钌铱合金导线", type = ITEM, amount = 64 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricant"  }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricant" }
     }
 }
 
@@ -70,7 +70,8 @@ R[5] = {
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
         { "gt.metaitem.01.30724.name", type = FLUID, amount = 250 },
-        { "gt.metaitem.99.635.name", type = FLUID, amount = 1440, cname = "fluid.molten.styrenebutadienerubber"}
+        --TODO 修改为MOLTEN
+        { "gt.metaitem.99.635.name", type = FLUID, amount = 1440, cname = "fluid.molten.styrenebutadienerubber" }
     }
 }
 
@@ -87,7 +88,7 @@ R[6] = {
         { "gt.metaitem.03.32085.name", type = ITEM, amount = 8 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 6 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 4, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricant"  }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricant" }
     }
 }
 
@@ -95,7 +96,7 @@ R[7] = {
     nickname = "Sensor (LuV)",
     items = {
         { "gt.blockmachines.gt_frame_hsss.name", type = ITEM, amount = 1 },
-        { "gt.metaitem.01.32606.name", type = ITEM, amount = 1},
+        { "gt.metaitem.01.32606.name", type = ITEM, amount = 1 },
         { "钌铱合金板", type = ITEM, amount = 8 },
         { "gt.metaitem.01.32725.name", type = ITEM, amount = 1 },
         { "gt.metaitem.03.32087.name", type = ITEM, amount = 4 },
@@ -111,7 +112,7 @@ R[8] = {
     nickname = "Emitter (LuV)",
     items = {
         { "gt.blockmachines.gt_frame_hsss.name", type = ITEM, amount = 1 },
-        { "gt.metaitem.01.32606.name", type = ITEM, amount = 1},
+        { "gt.metaitem.01.32606.name", type = ITEM, amount = 1 },
         { "钌铱合金杆", type = ITEM, amount = 8 },
         { "gt.metaitem.01.32725.name", type = ITEM, amount = 1 },
         { "gt.metaitem.03.32087.name", type = ITEM, amount = 4 },
