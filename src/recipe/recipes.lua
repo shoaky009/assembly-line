@@ -172,6 +172,24 @@ R[11] = {
     }
 }
 
+R[12] = {
+    nickname = "Dynamo Hatch (LuV)",
+    items = {
+        { "gt.blockcasings4.7.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.03.32088.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.03.32088.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.03.32088.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.03.32088.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.22325.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.22317.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.32675.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32058.name", type = ITEM, amount = 32 },
+        { "gt.blockmachines.wire.superconductorluv.01.name", type = ITEM, amount = 32 },
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 20, times = 144 },
+        { "gt.metaitem.01.11357.name", type = MOLTEN, amount = 8, times = 144 }
+    }
+}
+
 function _M.getRecipes()
     return R
 end
