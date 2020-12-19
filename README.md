@@ -1,7 +1,16 @@
 ##如何使用
+>推荐fork仓库之后修改完配置文件提交到远程仓库,
+>然后通过脚本拉取增加效率
 ```shell script
+#在os中运行下载以下脚本
 wget https://gitee.com/sh0aky/assembly-line/raw/master/script
-
+#运行默认拉取的仓库是https://gitee.com/sh0aky/assembly-line 
+#github经过测试经常有些文件下载失败 如果服务器在国外可以考虑
+#如果fork了想要拉取自己的仓库在script后面添加自己的仓库前缀
+#e.g. 自定义仓库 script https://gitee.com/xxxxx/assembly-line/raw
+#e.g. 自定义仓库和分支 script https://gitee.com/xxxxx/assembly-line/raw xxxx
+#e.g. github script https://raw.githubusercontent.com/shoaky009/assembly-line xxxx
+script
 ```
 
 ###1.设置config.lua
@@ -30,18 +39,18 @@ config.fluidSourceSide = sides.bottom
 ####1.6设置4个流体transposer的地址
 >序号代表装配线配方中对应的位置
 ```lua
-config.fluidInput1 = manager.proxy("your address")
-config.fluidInput2 = manager.proxy("your address")
-config.fluidInput3 = manager.proxy("your address")
-config.fluidInput4 = manager.proxy("your address")
+config.fluidInput[1] = manager.proxy("your address")
+config.fluidInput[2] = manager.proxy("your address")
+config.fluidInput[3] = manager.proxy("your address")
+config.fluidInput[4] = manager.proxy("your address")
 ```
 ####1.7设置4个ME流体接口的地址
 >序号代表装配线配方中对应的位置
 ```lua
-config.fluidInterface1 = manager.proxy("your address")
-config.fluidInterface2 = manager.proxy("your address")
-config.fluidInterface3 = manager.proxy("your address")
-config.fluidInterface4 = manager.proxy("your address")
+config.fluidInterface[1] = manager.proxy("your address")
+config.fluidInterface[2] = manager.proxy("your address")
+config.fluidInterface[3] = manager.proxy("your address")
+config.fluidInterface[4] = manager.proxy("your address")
 ```
 
 ####1.8如果要用oc把原料送到输入总线,需要放末影箱在输入总线下并且所有都在同一频道
@@ -87,7 +96,8 @@ config.chestOutput[13] = manager.proxy("your address")
 
 >2.输入总线必须使用ulv的
 
->3.建议输入仓用高等级的
+>3.流体配方看具体情况优先使用CELL或MOLTEN类型,因为me流体接口切换一种流体耗时需要5秒,
+> 而且流体需要记录到DB中才能自动标记,目前没有实现流体自动录入到DB中
 
 >4.如果出现转换器无法吸取me流体接口的流体,请把me流体接口的第一个槽位随便填装一种流体因为oc的api和me流体接口有点问题第1个槽位满了之后才会吸取第2个槽的流体,
 >但是第2个槽的流体满了不会从第3个槽位吸取流体,所以才第2个槽位来设置不同流体的设置
@@ -105,9 +115,9 @@ config.chestOutput[13] = manager.proxy("your address")
 
 5.4 fluid根据label会去db中查询对应的index,然后自动设置流体输出总线的对应输出流体
 
-5.5 cell直接到超级缸(或EnderIO的储罐)然后被工厂方块提取到输入仓
+5.5 cell直接到超级缸然后被工厂方块提取到输入仓
 ##参考图
-
+TODO
 
 转换器相对于使用robot配置复杂,造价昂贵(相对来说 其实对iv来说都还行)
 优势在于传输快,个人感觉机器人走得太慢了所以没有用

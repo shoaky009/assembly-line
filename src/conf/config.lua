@@ -17,16 +17,16 @@ config.chestInput.checkInterval = 3
 --fluid source side
 config.fluidSourceSide = 0
 config.tankSourceSide = sides.west
-config.fluidInput1 = manager.proxy("302cb9bd-0aaa-49e4-a137-03f357daa17e")
-config.fluidInput2 = manager.proxy("fc825e6a-ce6c-4893-84d7-c152c3e521de")
-config.fluidInput3 = manager.proxy("820c479c-6d6c-423f-bb26-1d3ceaea6b54")
-config.fluidInput4 = manager.proxy("924b47c1-78e8-4a2b-918e-7676da1dcffb")
+config.fluidInput[1] = manager.proxy("302cb9bd-0aaa-49e4-a137-03f357daa17e")
+config.fluidInput[2] = manager.proxy("fc825e6a-ce6c-4893-84d7-c152c3e521de")
+config.fluidInput[3] = manager.proxy("820c479c-6d6c-423f-bb26-1d3ceaea6b54")
+config.fluidInput[4] = manager.proxy("924b47c1-78e8-4a2b-918e-7676da1dcffb")
 
 --me fluid interfaces
-config.fluidInterface1 = manager.proxy("79b956a5-fa6f-4520-a8fc-66b3f316e690")
-config.fluidInterface2 = manager.proxy("85f09a86-897e-43cd-9355-d84b6060fdf2")
-config.fluidInterface3 = manager.proxy("b329aa0a-8d8b-4434-8d2c-827ac6ee6ec0")
-config.fluidInterface4 = manager.proxy("c6529344-c66b-4600-b07b-45358e141616")
+config.fluidInterface[1] = manager.proxy("79b956a5-fa6f-4520-a8fc-66b3f316e690")
+config.fluidInterface[2]= manager.proxy("85f09a86-897e-43cd-9355-d84b6060fdf2")
+config.fluidInterface[3] = manager.proxy("b329aa0a-8d8b-4434-8d2c-827ac6ee6ec0")
+config.fluidInterface[4] = manager.proxy("c6529344-c66b-4600-b07b-45358e141616")
 
 --ender chest
 config.chestOutput[1] = manager.proxy("896fe0aa-0b3d-44fb-a6a4-cf5940ae1a1e")
