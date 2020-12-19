@@ -174,7 +174,7 @@ R[11] = {
 }
 
 R[12] = {
-    nickname = "Fusion Reactor Computer Mark 1",
+    nickname = "Fusion Reactor Computer MK1",
     items = {
         { "gt.blockcasings4.7.name", type = ITEM, amount = 1 },
         { "gt.metaitem.03.32088.name", type = ITEM, amount = 1 },
