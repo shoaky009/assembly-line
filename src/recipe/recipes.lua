@@ -192,12 +192,12 @@ R[12] = {
 }
 
 R[13] = {
-    nickname = "Heavy Duty Plate Tire 5",
+    nickname = "Heavy-DutyAlloyIngotT5",
     items = {
-        { "Heavy Duty Plate Tire 4", type = ITEM, amount = 1 },
-        { "Compressed Quantium Plate", type = ITEM, amount = 1 },
-        { "Compressed Quantium Plate", type = ITEM, amount = 1 },
-        { "gt.metaitem.01.260701.name", type = ITEM, amount = 1 },
+        { "Heavy Duty Plate Tier 4", type = ITEM, amount = 1 },
+        { "Compressed Quantium Plate", type = ITEM, amount = 4 },
+        { "Compressed Quantium Plate", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.26070.name", type = ITEM, amount = 8 },
         { "gt.metaitem.01.23314.name", type = MOLTEN, amount = 1, times = 72 }
     }
 }
