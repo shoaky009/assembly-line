@@ -191,6 +191,17 @@ R[12] = {
     }
 }
 
+R[13] = {
+    nickname = "Heavy Duty Plate Tire 5",
+    items = {
+        { "Heavy Duty Plate Tire 4", type = ITEM, amount = 1 },
+        { "Compressed Quantium Plate", type = ITEM, amount = 1 },
+        { "Compressed Quantium Plate", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.260701.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.23314.name", type = MOLTEN, amount = 1, times = 72 }
+    }
+}
+
 function _M.getRecipes()
     return R
 end
