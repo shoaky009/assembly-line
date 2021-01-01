@@ -202,6 +202,22 @@ R[13] = {
     }
 }
 
+R[14] = {
+    nickname = "Electric Motor (ZPM)",
+    items = {
+        { "gt.metaitem.01.23399.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.02.22325.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.28325.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.25325.name", type = ITEM, amount = 16 },
+        { "gt.metaitem.02.19070.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19070.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19070.name", type = ITEM, amount = 64 },
+        { "gt.blockmachines.cable.vanadiumgallium.04.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 2, times = 144 },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "fluid.lubricant" }
+    }
+}
+
 function _M.getRecipes()
     return R
 end
