@@ -233,6 +233,22 @@ R[15] = {
     }
 }
 
+R[16] = {
+    nickname = "Electric Piston (ZPM)",
+    items = {
+        { "gt.metaitem.01.32607.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.17325.name", type = ITEM, amount = 6 },
+        { "gt.metaitem.01.28325.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.25325.name", type = ITEM, amount = 32 },
+        { "gt.metaitem.01.23325.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.02.31325.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.02.30225.name", type = ITEM, amount = 2 },
+        { "gt.blockmachines.cable.vanadiumgallium.04.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 2, times = 144 },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "fluid.lubricant" }
+    }
+}
+
 function _M.getRecipes()
     return R
 end
