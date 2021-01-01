@@ -218,6 +218,21 @@ R[14] = {
     }
 }
 
+R[15] = {
+    nickname = "Electric Pump (ZPM)",
+    items = {
+        { "gt.metaitem.01.32607.name", type = ITEM, amount = 1 },
+        { "gt.blockmachines.gt_pipe_enderium.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.17325.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.37325.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.28325.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.02.21325.name", type = ITEM, amount = 2 },
+        { "gt.blockmachines.cable.vanadiumgallium.04.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 2, times = 144 },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "fluid.lubricant" }
+    }
+}
+
 function _M.getRecipes()
     return R
 end
