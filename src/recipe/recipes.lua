@@ -224,8 +224,8 @@ R[15] = {
         { "gt.metaitem.01.32607.name", type = ITEM, amount = 1 },
         { "gt.blockmachines.gt_pipe_enderium.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.17325.name", type = ITEM, amount = 2 },
-        { "gt.metaitem.01.37325.name", type = ITEM, amount = 8 },
-        { "gt.metaitem.01.28325.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.27325.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.28635.name", type = ITEM, amount = 8 },
         { "gt.metaitem.02.21325.name", type = ITEM, amount = 2 },
         { "gt.blockmachines.cable.vanadiumgallium.04.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 2, times = 144 },
@@ -242,10 +242,38 @@ R[16] = {
         { "gt.metaitem.01.25325.name", type = ITEM, amount = 32 },
         { "gt.metaitem.01.23325.name", type = ITEM, amount = 4 },
         { "gt.metaitem.02.31325.name", type = ITEM, amount = 1 },
-        { "gt.metaitem.02.30225.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.02.20325.name", type = ITEM, amount = 2 },
         { "gt.blockmachines.cable.vanadiumgallium.04.name", type = ITEM, amount = 4 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 2, times = 144 },
         { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "fluid.lubricant" }
+    }
+}
+
+R[17] = {
+    nickname = "Conveyor Module (ZPM)",
+    items = {
+        { "gt.metaitem.01.32607.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.17325.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.28325.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.25325.name", type = ITEM, amount = 32 },
+        { "gt.blockmachines.cable.vanadiumgallium.04.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 2, times = 144 },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750 },
+        { "gt.metaitem.99.635.name", type = FLUID, amount = 2880, cname = "fluid.molten.styrenebutadienerubber" }
+    }
+}
+
+R[18] = {
+    nickname = "Circuit Assembler",
+    items = {
+        { "gt.blockmachines.basicmachine.circuitassembler.tier.06.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.32655.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.32606.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.32675.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.32685.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.32695.name", type = ITEM, amount = 1 },
+        { "镀铑钯板", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 10, times = 144 },
     }
 }
 
