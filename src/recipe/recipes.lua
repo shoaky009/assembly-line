@@ -277,6 +277,23 @@ R[18] = {
     }
 }
 
+R[19] = {
+    nickname = "Robot Arm (ZPM)",
+    items = {
+        { "gt.metaitem.02.22325.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.02.31325.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.02.20325.name", type = ITEM, amount = 3 },
+        { "gt.metaitem.01.32607.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.32646.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.03.32088.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32087.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.03.32086.name", type = ITEM, amount = 8 },
+        { "gt.blockmachines.cable.vanadiumgallium.04.name", type = ITEM, amount = 6 },
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 8, times = 144 },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "fluid.lubricant" }
+    }
+}
+
 function _M.getRecipes()
     return R
 end
