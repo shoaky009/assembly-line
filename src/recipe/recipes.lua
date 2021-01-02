@@ -294,6 +294,38 @@ R[19] = {
     }
 }
 
+R[20] = {
+    nickname = "Emitter (ZPM)",
+    items = {
+        { "gt.blockmachines.gt_frame_naquadahalloy.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.32607.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.23317.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.32725.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32088.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.29868.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29868.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29868.name", type = ITEM, amount = 64 },
+        { "gt.blockmachines.cable.vanadiumgallium.04.name", type = ITEM, amount = 7 },
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 8, times = 144 }
+    }
+}
+
+R[21] = {
+    nickname = "Sensor (ZPM)",
+    items = {
+        { "gt.blockmachines.gt_frame_naquadahalloy.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.32607.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.28325.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.32725.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32088.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.29868.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29868.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29868.name", type = ITEM, amount = 64 },
+        { "gt.blockmachines.cable.vanadiumgallium.04.name", type = ITEM, amount = 7 },
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 8, times = 144 }
+    }
+}
+
 function _M.getRecipes()
     return R
 end
