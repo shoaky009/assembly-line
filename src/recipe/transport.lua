@@ -115,8 +115,6 @@ end
 function _M.suckTankFluid(slot, amount)
     local fluidInput = _M.getFluidProxyBySlot(slot)
     local suck = 0
-    local failed = 0
-
     --需要优化,后续有需求再调整
     while suck < amount do
         local success, transferred = fluidInput.transferFluid(tankSourceSide, sides.top, amount)
@@ -127,10 +125,7 @@ function _M.suckTankFluid(slot, amount)
             break
         end
         if not success or transferred < amount then
-            failed = failed + 1
-            if failed == 5 then
-                error("transfer fluid failed request amount" .. amount .. " actually transferred " .. suck)
-            end
+            print("transfer fluid failed request amount" .. amount .. " actually transferred " .. suck)
         end
         --也许有些提取比较久2秒不够
         os.sleep(2)
