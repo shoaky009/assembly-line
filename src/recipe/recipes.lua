@@ -326,6 +326,38 @@ R[21] = {
     }
 }
 
+R[22] = {
+    nickname = "Energy Hatch (ZPM)",
+    items = {
+        { "gt.blockmachines.hull.tier.07.name", type = ITEM, amount = 1 },
+        { "gt.blockmachines.wire.superconductorzpm.02.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32161.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32088.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32147.name", type = ITEM, amount = 2 },
+        { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
+        { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.32616.name", type = ITEM, amount = 1 },
+        { "Coolant Cell", type = CELL, amount = 4 },
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 10, times = 144 }
+    }
+}
+
+R[23] = {
+    nickname = "Dynamo Hatch (ZPM)",
+    items = {
+        { "gt.blockmachines.hull.tier.07.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.02.24992.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.03.32161.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32088.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32147.name", type = ITEM, amount = 2 },
+        { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
+        { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.32616.name", type = ITEM, amount = 1 },
+        { "Coolant Cell", type = CELL, amount = 4 },
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 10, times = 144 }
+    }
+}
+
 function _M.getRecipes()
     return R
 end
