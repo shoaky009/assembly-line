@@ -69,12 +69,14 @@ function _M.transCell(recipeItem, fluidSlot)
 end
 
 function _M.trans(label, amount, outputSide)
-    local sourceSlot = _M.getSlotByLabel(label, amount, chestSourceSide)
+    local sourceSlots = _M.getSlotByLabel(label, amount, chestSourceSide)
     local outputSlot = _M.getAvailableOutputSlot(outputSide)
-    local transferred = inputProxy.transferItem(chestSourceSide, outputSide, amount, sourceSlot, outputSlot)
-    if transferred < amount then
-        error("not enough item:" .. label .. " " .. tostring(amount - transferred) .. " more")
+    for _, v in ipairs(sourceSlots) do
+        local transferred = inputProxy.transferItem(chestSourceSide, outputSide, v.size, v.slot, outputSlot)
     end
+    --if transferred < amount then
+    --    error("not enough item:" .. label .. " " .. tostring(amount - transferred) .. " more")
+    --end
 end
 
 function _M.getFluidProxyBySlot(inputBusSlot)
@@ -100,16 +102,22 @@ function _M.getSlotByLabel(label, amount, side)
     if not stacks then
         error("place check 'config.chestInput.chestSourceSide' no stacks found")
     end
+
+    local slots = {}
     for i, v in pairs(stacks.getAll()) do
         if v and v.label == label then
+            local item = { slot = i + 1}
+            table.insert(slots, item)
             if v.size >= amount then
-                return i + 1
+                item.size = amount
+                return slots
             else
-                print("not enough item:" .. label .. " in source chest skip..")
+                item.size = v.size
+                amount = amount - v.size
             end
         end
     end
-    print("no item " .. label .. " in source chest")
+    return slots
 end
 
 function _M.suckTankFluid(slot, amount)
@@ -135,7 +143,7 @@ end
 function _M.transOutput(slot, item)
     local output = config.chestOutput[slot]
     if not output then
-       error("item output " .. tostring(slot) .. "not found plz check config or disable config.chestOutputMode")
+        error("item output " .. tostring(slot) .. "not found plz check config or disable config.chestOutputMode")
     end
 
     while true do
@@ -148,8 +156,10 @@ function _M.transOutput(slot, item)
         os.sleep(1)
     end
     --默认底部和顶部
-    local sourceSlot = _M.getSlotByLabel(item[1], item.amount, chestOutputSide)
-    output.transferItem(0, 1, item.amount, sourceSlot, 1)
+    local sourceSlots = _M.getSlotByLabel(item[1], item.amount, chestOutputSide)
+    for _, v in ipairs(sourceSlots) do
+        output.transferItem(0, 1, v.size, v.slot, 1)
+    end
 end
 
 function _M.getTankFluid(slot)
