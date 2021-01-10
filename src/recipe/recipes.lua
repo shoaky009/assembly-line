@@ -358,6 +358,23 @@ R[23] = {
     }
 }
 
+R[24] = {
+    nickname = "Field Generator (ZPM)",
+    items = {
+        { "gt.blockmachines.gt_frame_naquadahalloy.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.17325.name", type = ITEM, amount = 6 },
+        { "gt.metaitem.01.32725.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.32686.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.03.32091.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.02.19070.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19070.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19070.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19070.name", type = ITEM, amount = 64 },
+        { "gt.blockmachines.cable.vanadiumgallium.04.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 8, times = 144 }
+    }
+}
+
 function _M.getRecipes()
     return R
 end
