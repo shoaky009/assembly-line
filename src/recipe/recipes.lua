@@ -392,6 +392,17 @@ R[25] = {
     }
 }
 
+R[26] = {
+    nickname = "Heavy-DutyAlloyIngotT6",
+    items = {
+        { "Heavy Duty Plate Tier 5", type = ITEM, amount = 1 },
+        { "Compressed Lead-Oriharukon Plate", type = ITEM, amount = 5 },
+        { "Compressed Lead-Oriharukon Plate", type = ITEM, amount = 5 },
+        { "gt.metaitem.01.26329.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 }
+    }
+}
+
 function _M.getRecipes()
     return R
 end
