@@ -403,6 +403,37 @@ R[26] = {
     }
 }
 
+R[27] = {
+    nickname = "Electric Motor (UV)",
+    items = {
+        { "gt.metaitem.02.22399.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.02.22129.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.28129.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.25129.name", type = ITEM, amount = 16 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.blockmachines.cable.naquadahalloy.04.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "fluid.molten.naquadira" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 1296, cname = "fluid.molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 2000, cname = "fluid.lubricant" }
+    }
+}
+
+R[28] = {
+    nickname = "Heavy-DutyAlloyIngotT7",
+    items = {
+        { "Heavy Duty Plate Tier 6", type = ITEM, amount = 1 },
+        { "Compressed Mysterious Crystal Plate", type = ITEM, amount = 6 },
+        { "Compressed Mysterious Crystal Plate", type = ITEM, amount = 6 },
+        { "gt.metaitem.01.26129.name", type = ITEM, amount = 10 },
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 2, times = 144 }
+    }
+}
+
 function _M.getRecipes()
     return R
 end
