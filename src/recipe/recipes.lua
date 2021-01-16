@@ -337,8 +337,8 @@ R[22] = {
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.metaitem.01.32616.name", type = ITEM, amount = 1 },
-        { "Coolant Cell", type = CELL, amount = 4 },
-        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 10, times = 144 }
+        { "Coolant Cell", type = FLUID, amount = 4000, cname="IC2 Coolant" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 1440, cname = "fluid.molten.solderingalloy" }
     }
 }
 
@@ -353,8 +353,8 @@ R[23] = {
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.metaitem.01.32616.name", type = ITEM, amount = 1 },
-        { "Coolant Cell", type = CELL, amount = 4 },
-        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 10, times = 144 }
+        { "Coolant Cell", type = FLUID, amount = 4000, cname="IC2 Coolant" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 1440, cname = "fluid.molten.solderingalloy" }
     }
 }
 
@@ -495,8 +495,78 @@ R[32] = {
         { "gt.metaitem.03.32096.name", type = ITEM, amount = 8 },
         { "gt.blockmachines.cable.naquadahalloy.04.name", type = ITEM, amount = 6 },
         { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "fluid.molten.naquadria" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 1296, cname = "fluid.molten.solderingalloy" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2304, cname = "fluid.molten.solderingalloy" },
         { "gt.metaitem.01.30724.name", type = FLUID, amount = 2000, cname = "fluid.lubricant" },
+    }
+}
+
+R[33] = {
+    nickname = "Sensor (UV)",
+    items = {
+        { "gt.blockmachines.gt_frame_neutronium.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.32608.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.17129.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.32726.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.03.32091.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.29327.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29327.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29327.name", type = ITEM, amount = 64 },
+        { "gt.blockmachines.cable.naquadahalloy.04.name", type = ITEM, amount = 7 },
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "fluid.molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2304, cname = "fluid.molten.solderingalloy" }
+    }
+}
+
+R[34] = {
+    nickname = "Emitter (UV)",
+    items = {
+        { "gt.blockmachines.gt_frame_neutronium.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.32608.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.23129.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.32726.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.03.32091.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.29327.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29327.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29327.name", type = ITEM, amount = 64 },
+        { "gt.blockmachines.cable.naquadahalloy.04.name", type = ITEM, amount = 7 },
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "fluid.molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2304, cname = "fluid.molten.solderingalloy" }
+    }
+}
+
+R[35] = {
+    nickname = "Energy Hatch (UV)",
+    items = {
+        { "gt.blockmachines.hull.tier.08.name", type = ITEM, amount = 1 },
+        { "gt.blockmachines.wire.superconductoruv.02.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32163.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32091.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32148.name", type = ITEM, amount = 2 },
+        { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
+        { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
+        { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
+        { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.32617.name", type = ITEM, amount = 1 },
+        { "Coolant Cell", type = FLUID, amount = 8000, cname="IC2 Coolant" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2880, cname = "fluid.molten.solderingalloy" }
+    }
+}
+
+R[36] = {
+    nickname = "Dynamo Hatch (UV)",
+    items = {
+        { "gt.blockmachines.hull.tier.08.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.02.24986.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32163.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32091.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32148.name", type = ITEM, amount = 2 },
+        { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
+        { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
+        { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
+        { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.32617.name", type = ITEM, amount = 1 },
+        { "Coolant Cell", type = FLUID, amount = 8000, cname="IC2 Coolant" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2880, cname = "fluid.molten.solderingalloy" }
     }
 }
 

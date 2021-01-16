@@ -33,7 +33,7 @@ function _M.transFluid(recipeFluid, inputBusSlot)
         if not index then
             --local craftable = fluidInterface.getCraftables({name = label})
             --print(craftable)
-            error("fluid:" .. label .. " no index in db")
+            error("fluid:" .. label .. " not in the db")
         end
         print("set fluid interface slot:" .. inputBusSlot .. " label:" .. label)
         if conf then
@@ -48,10 +48,14 @@ function _M.transFluid(recipeFluid, inputBusSlot)
     end
 
     local amount = recipeFluid.amount
-    local success, transferred = fluidInput.transferFluid(fluidSourceSide, config.tankSourceSide, amount)
-    if not success or transferred < amount then
-        error("transfer fluid failed request amount:" ..
-                amount .. " actually transferred " .. transferred)
+    while true do
+        local _, transferred = fluidInput.transferFluid(fluidSourceSide, sides.top, amount)
+        amount = amount - transferred
+        if amount <= 0 then
+            break
+        end
+        print("slot " .. inputBusSlot .." not enough fluid:" .. cname)
+        os.sleep(2)
     end
 end
 
