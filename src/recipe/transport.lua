@@ -23,28 +23,35 @@ function _M.transFluid(recipeFluid, inputBusSlot)
     end
 
     local conf = fluidInterface.getFluidInterfaceConfiguration(1)
-    local label = recipeFluid[1]
-    local cname = recipeFluid.cname
+    local cellLabel = recipeFluid[1]
+    local fluidLabel = recipeFluid.cname
     --配置与配方不一样或者没有
-    if not conf or conf.label ~= cname then
+    if not conf or conf.label ~= fluidLabel then
         --set all config the same
         local db = manager.getFluidDatabase()
-        local index = manager.getFluidIndexByLabel(label)
+        local index = manager.getFluidIndexByLabel(cellLabel)
         if not index then
             --local craftable = fluidInterface.getCraftables({name = label})
             --print(craftable)
-            error("fluid:" .. label .. " not in the db")
+            error("fluid:" .. cellLabel .. " not in the db")
         end
-        print("set fluid interface slot:" .. inputBusSlot .. " label:" .. label)
+        print("set fluid interface slot:" .. inputBusSlot .. " label:" .. cellLabel)
         if conf then
             print(conf.label)
         end
         local success = fluidInterface.setFluidInterfaceConfiguration(1, db.address, index)
         if not success then
-            error("set fluid interface failed, label:" .. label .. "db index:" .. index)
+            error("set fluid interface failed, label:" .. cellLabel .. "db index:" .. index)
         end
-        --TODO 后面优化这部分 因为transferFluid不能提取指定槽位
-        os.sleep(10)
+
+        while true do
+            local fluid = fluidInput.getFluidInTank(0, 1)
+            if fluid and fluid.label == fluidLabel then
+                break
+            end
+            print("fluid interface:".. inputBusSlot ..", current fluid is " .. fluid.label .. ", need:" .. fluidLabel)
+            os.sleep(0.8)
+        end
     end
 
     local amount = recipeFluid.amount
@@ -54,7 +61,7 @@ function _M.transFluid(recipeFluid, inputBusSlot)
         if amount <= 0 then
             break
         end
-        print("slot " .. inputBusSlot .." not enough fluid:" .. cname)
+        print("slot " .. inputBusSlot .." not enough fluid:" .. fluidLabel)
         os.sleep(2)
     end
 end
