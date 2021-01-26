@@ -69,8 +69,7 @@ R[5] = {
         { "gt.metaitem.01.25374.name", type = ITEM, amount = 32 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250 },
-        --TODO 修改为MOLTEN
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricant" },
         { "gt.metaitem.99.635.name", type = FLUID, amount = 1440, cname = "fluid.molten.styrenebutadienerubber" }
     }
 }
@@ -258,7 +257,7 @@ R[17] = {
         { "gt.metaitem.01.25325.name", type = ITEM, amount = 32 },
         { "gt.blockmachines.cable.vanadiumgallium.04.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 2, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750 },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "fluid.lubricant" },
         { "gt.metaitem.99.635.name", type = FLUID, amount = 2880, cname = "fluid.molten.styrenebutadienerubber" }
     }
 }
@@ -337,7 +336,7 @@ R[22] = {
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.metaitem.01.32616.name", type = ITEM, amount = 1 },
-        { "Coolant Cell", type = FLUID, amount = 4000, cname="IC2 Coolant" },
+        { "Coolant Cell", type = FLUID, amount = 4000, cname = "IC2 Coolant" },
         { "gt.metaitem.99.314.name", type = FLUID, amount = 1440, cname = "fluid.molten.solderingalloy" }
     }
 }
@@ -353,7 +352,7 @@ R[23] = {
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.metaitem.01.32616.name", type = ITEM, amount = 1 },
-        { "Coolant Cell", type = FLUID, amount = 4000, cname="IC2 Coolant" },
+        { "Coolant Cell", type = FLUID, amount = 4000, cname = "IC2 Coolant" },
         { "gt.metaitem.99.314.name", type = FLUID, amount = 1440, cname = "fluid.molten.solderingalloy" }
     }
 }
@@ -547,7 +546,7 @@ R[35] = {
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.metaitem.01.32617.name", type = ITEM, amount = 1 },
-        { "Coolant Cell", type = FLUID, amount = 8000, cname="IC2 Coolant" },
+        { "Coolant Cell", type = FLUID, amount = 8000, cname = "IC2 Coolant" },
         { "gt.metaitem.99.314.name", type = FLUID, amount = 2880, cname = "fluid.molten.solderingalloy" }
     }
 }
@@ -565,7 +564,7 @@ R[36] = {
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.metaitem.01.32617.name", type = ITEM, amount = 1 },
-        { "Coolant Cell", type = FLUID, amount = 8000, cname="IC2 Coolant" },
+        { "Coolant Cell", type = FLUID, amount = 8000, cname = "IC2 Coolant" },
         { "gt.metaitem.99.314.name", type = FLUID, amount = 2880, cname = "fluid.molten.solderingalloy" }
     }
 }
