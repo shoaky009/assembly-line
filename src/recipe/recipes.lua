@@ -569,6 +569,22 @@ R[36] = {
     }
 }
 
+R[37] = {
+    nickname = "Neuro Processing Unit",
+    items = {
+        { "gt.metaitem.03.32105.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.03.32073.name", type = ITEM, amount = 16 },
+        { "gt.metaitem.03.32023.name", type = ITEM, amount = 16 },
+        { "gt.blockmachines.gt_pipe_polybenzimidazole_tiny.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.02.18320.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.29635.name", type = ITEM, amount = 32 },
+        { "gt.metaitem.01.26374.name", type = ITEM, amount = 32 },
+        { "gt.metaitem.01.30609.name", type = FLUID, amount = 250, cname = "fluid.growthmediumsterilized" },
+        { "UuMatter Cell", type = FLUID, amount = 250, cname = "UU-Matter" },
+        { "Coolant Cell", type = FLUID, amount = 1000, cname = "IC2 Coolant" }
+    }
+}
+
 function _M.getRecipes()
     return R
 end
