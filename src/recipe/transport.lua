@@ -49,7 +49,11 @@ function _M.transFluid(recipeFluid, inputBusSlot)
             if fluid and fluid.label == fluidLabel then
                 break
             end
-            print("fluid interface:".. inputBusSlot ..", current fluid is " .. fluid.label .. ", need:" .. fluidLabel)
+            if fluid and fluid.label then
+                print("fluid interface:".. inputBusSlot ..", current fluid is " .. fluid.label .. ", need:" .. fluidLabel)
+            else
+                print("fluid interface:".. inputBusSlot ..", not enough fluid, need:" .. fluidLabel)
+            end
             os.sleep(0.8)
         end
     end
