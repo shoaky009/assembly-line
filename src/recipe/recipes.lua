@@ -585,6 +585,25 @@ R[37] = {
     }
 }
 
+R[38] = {
+    nickname = "Wetware Mainframe (UHV)",
+    items = {
+        { "gt.blockmachines.gt_frame_tritanium.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32094.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32147.name", type = ITEM, amount = 16 },
+        { "gt.metaitem.03.32027.name", type = ITEM, amount = 16 },
+        { "gt.metaitem.03.32024.name", type = ITEM, amount = 16 },
+        { "gt.metaitem.03.32026.name", type = ITEM, amount = 16 },
+        { "gt.metaitem.03.32025.name", type = ITEM, amount = 16 },
+        { "gt.metaitem.03.32039.name", type = ITEM, amount = 48},
+        { "gt.blockmachines.wire.superconductorzpm.02.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29471.name", type = ITEM, amount = 64},
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2880, cname = "fluid.molten.solderingalloy" },
+        { "Coolant Cell", type = FLUID, amount = 10000, cname = "IC2 Coolant" },
+        { "gt.metaitem.01.30093.name", type = FLUID, amount = 2500, cname = "fluid.radon" }
+    }
+}
+
 function _M.getRecipes()
     return R
 end
