@@ -595,12 +595,32 @@ R[38] = {
         { "gt.metaitem.03.32024.name", type = ITEM, amount = 16 },
         { "gt.metaitem.03.32026.name", type = ITEM, amount = 16 },
         { "gt.metaitem.03.32025.name", type = ITEM, amount = 16 },
-        { "gt.metaitem.03.32039.name", type = ITEM, amount = 48},
+        { "gt.metaitem.03.32039.name", type = ITEM, amount = 48 },
         { "gt.blockmachines.wire.superconductorzpm.02.name", type = ITEM, amount = 64 },
-        { "gt.metaitem.01.29471.name", type = ITEM, amount = 64},
+        { "gt.metaitem.01.29471.name", type = ITEM, amount = 64 },
         { "gt.metaitem.99.314.name", type = FLUID, amount = 2880, cname = "fluid.molten.solderingalloy" },
         { "Coolant Cell", type = FLUID, amount = 10000, cname = "IC2 Coolant" },
         { "gt.metaitem.01.30093.name", type = FLUID, amount = 2500, cname = "fluid.radon" }
+    }
+}
+
+R[39] = {
+    nickname = "Field Generator (UHV)",
+    items = {
+        { "gt.blockmachines.gt_frame_neutronium.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.17129.name", type = ITEM, amount = 6 },
+        { "gt.metaitem.01.32726.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.32687.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.03.32095.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
+        { "gt.blockmachines.cable.naquadahalloy.04.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "fluid.molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2304, cname = "fluid.molten.solderingalloy" }
     }
 }
 
