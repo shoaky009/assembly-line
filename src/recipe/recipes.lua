@@ -624,6 +624,45 @@ R[39] = {
     }
 }
 
+R[40] = {
+    nickname = "Electric Motor (UHV)",
+    items = {
+        { "gt.metaitem.02.22399.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.02.22982.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.28982.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.25982.name", type = ITEM, amount = 32 },
+        { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
+        { "gt.blockmachines.cable.bedrockium.04.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "fluid.molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2592, cname = "fluid.molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 4000, cname = "fluid.lubricant" }
+    }
+}
+
+R[41] = {
+    nickname = "Electric Pump (UHV)",
+    items = {
+        { "gt.metaitem.01.32596.name", type = ITEM, amount = 1 },
+        { "gt.blockmachines.gt_pipe_neutronium_large.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.17982.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.27982.name", type = ITEM, amount = 16 },
+        { "gt.metaitem.01.28471.name", type = ITEM, amount = 32 },
+        { "gt.metaitem.02.21982.name", type = ITEM, amount = 4 },
+        { "gt.blockmachines.cable.bedrockium.04.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "fluid.molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2592, cname = "fluid.molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 4000, cname = "fluid.lubricant" }
+    }
+}
+
+
 function _M.getRecipes()
     return R
 end
