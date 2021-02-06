@@ -50,9 +50,9 @@ function _M.transFluid(recipeFluid, inputBusSlot)
                 break
             end
             if fluid and fluid.label then
-                print("fluid interface:".. inputBusSlot ..", current fluid is " .. fluid.label .. ", need:" .. fluidLabel)
+                print("fluid interface:" .. inputBusSlot .. ", current fluid is " .. fluid.label .. ", need:" .. fluidLabel)
             else
-                print("fluid interface:".. inputBusSlot ..", not enough fluid, need:" .. fluidLabel)
+                print("fluid interface:" .. inputBusSlot .. ", not enough fluid, need:" .. fluidLabel)
             end
             os.sleep(0.8)
         end
@@ -65,7 +65,7 @@ function _M.transFluid(recipeFluid, inputBusSlot)
         if amount <= 0 then
             break
         end
-        print("slot " .. inputBusSlot .." not enough fluid:" .. fluidLabel)
+        print("slot " .. inputBusSlot .. " not enough fluid:" .. fluidLabel)
         os.sleep(2)
     end
 end
@@ -87,7 +87,8 @@ function _M.trans(label, amount, outputSide)
     local sourceSlots = _M.getSlotByLabel(label, amount, chestSourceSide)
     local outputSlot = _M.getAvailableOutputSlot(outputSide)
     for _, v in ipairs(sourceSlots) do
-        local transferred = inputProxy.transferItem(chestSourceSide, outputSide, v.size, v.slot, outputSlot)
+        local transferred = inputProxy.transferItem(chestSourceSide, outputSide, v.size, v.slot, outputSlot) or 0
+        print("slot:" .. v.slot .. " transferred:" .. transferred)
     end
     --if transferred < amount then
     --    error("not enough item:" .. label .. " " .. tostring(amount - transferred) .. " more")
@@ -121,7 +122,7 @@ function _M.getSlotByLabel(label, amount, side)
     local slots = {}
     for i, v in pairs(stacks.getAll()) do
         if v and v.label == label then
-            local item = { slot = i + 1}
+            local item = { slot = i + 1 }
             table.insert(slots, item)
             if v.size >= amount then
                 item.size = amount
@@ -179,8 +180,7 @@ end
 
 function _M.getTankFluid(slot)
     local input = _M.getFluidProxyBySlot(slot)
-    local fluid = input.getFluidInTank(tankSourceSide)
-    return fluid[1]
+    return input.getFluidInTank(tankSourceSide)[1]
 end
 
 return _M

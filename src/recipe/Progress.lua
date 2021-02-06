@@ -104,12 +104,12 @@ function _M:waiting4Fluid(maxSlot)
         table.insert(coroutines, i, co)
     end
 
-    --FIXME concurrent
     repeat
         ::continue::
         for i, v in pairs(coroutines) do
             local _, value = coroutine.resume(v, i, self.suckSlot[i])
             if value == false or not coroutine.status(v) == "dead" then
+                --FIXME concurrent
                 os.sleep(0.2)
                 goto continue
             else

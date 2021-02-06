@@ -6,7 +6,7 @@ local config = {
 local manager = require("manager")
 local sides = require("sides")
 
-config.chestInput.proxy = manager.proxy("638fb0c6-b7a6-4ef3-b0ee-da57ebe3f35c")
+config.chestInput.proxy = manager.proxy("${ci1}")
 --me interface chest
 config.chestInput.chestSourceSide = sides.north
 config.chestInput.chestOutputSide = sides.south
@@ -17,30 +17,30 @@ config.chestInput.checkInterval = 3
 --fluid source side
 config.fluidSourceSide = 0
 config.tankSourceSide = sides.west
-config.fluidInput[1] = manager.proxy("302cb9bd-0aaa-49e4-a137-03f357daa17e")
-config.fluidInput[2] = manager.proxy("fc825e6a-ce6c-4893-84d7-c152c3e521de")
-config.fluidInput[3] = manager.proxy("820c479c-6d6c-423f-bb26-1d3ceaea6b54")
-config.fluidInput[4] = manager.proxy("924b47c1-78e8-4a2b-918e-7676da1dcffb")
+config.fluidInput[1] = manager.proxy("${fi1}")
+config.fluidInput[2] = manager.proxy("${fi2}")
+config.fluidInput[3] = manager.proxy("${fi3}")
+config.fluidInput[4] = manager.proxy("${fi4}")
 
 --me fluid interfaces
-config.fluidInterface[1] = manager.proxy("79b956a5-fa6f-4520-a8fc-66b3f316e690")
-config.fluidInterface[2]= manager.proxy("85f09a86-897e-43cd-9355-d84b6060fdf2")
-config.fluidInterface[3] = manager.proxy("b329aa0a-8d8b-4434-8d2c-827ac6ee6ec0")
-config.fluidInterface[4] = manager.proxy("5bc1214b-c2d6-4c1c-a4d5-9efffe7e0d2b")
+config.fluidInterface[1] = manager.proxy("${fif1}")
+config.fluidInterface[2]= manager.proxy("${fif2}")
+config.fluidInterface[3] = manager.proxy("${fif3}")
+config.fluidInterface[4] = manager.proxy("${fif4}")
 
 --ender chest
-config.chestOutput[1] = manager.proxy("896fe0aa-0b3d-44fb-a6a4-cf5940ae1a1e")
-config.chestOutput[2] = manager.proxy("5fdd9694-f0e9-4613-ac5d-f44afc1c4a91")
-config.chestOutput[3] = manager.proxy("45dc91ff-2ef9-4412-a17e-892542e4f00f")
-config.chestOutput[4] = manager.proxy("7c824c05-69b5-4e76-ac4b-1646e6a4685e")
-config.chestOutput[5] = manager.proxy("7a4c2db6-80cf-4805-badd-7fdb5fababb5")
-config.chestOutput[6] = manager.proxy("77d40e0b-0884-4135-b991-0e552316191a")
-config.chestOutput[7] = manager.proxy("add6fa46-4250-4e10-8bda-ca8897dd0ee5")
-config.chestOutput[8] = manager.proxy("269331d2-14ec-4587-863d-9aaffa09ea90")
-config.chestOutput[9] = manager.proxy("65321ef9-915c-4389-ac9f-1146e9ec927b")
-config.chestOutput[10] = manager.proxy("139656ab-ac33-4a53-a2cb-d439cef2a10a")
-config.chestOutput[11] = manager.proxy("71ce87cf-e03f-4125-bdf5-bbbb730b037f")
-config.chestOutput[12] = manager.proxy("a501be25-41f3-400e-a00d-c47859cac683")
-config.chestOutput[13] = manager.proxy("e9a1e39a-bfb4-4d6d-832e-69ab142f06d7")
+config.chestOutput[1] = manager.proxy("${co1}")
+config.chestOutput[2] = manager.proxy("${co2}")
+config.chestOutput[3] = manager.proxy("${co3}")
+config.chestOutput[4] = manager.proxy("${co4}")
+config.chestOutput[5] = manager.proxy("${co5}")
+config.chestOutput[6] = manager.proxy("${co6}")
+config.chestOutput[7] = manager.proxy("${co7}")
+config.chestOutput[8] = manager.proxy("${co8}")
+config.chestOutput[9] = manager.proxy("${co9}")
+config.chestOutput[10] = manager.proxy("${co10}")
+config.chestOutput[11] = manager.proxy("${co11}")
+config.chestOutput[12] = manager.proxy("${co12}")
+config.chestOutput[13] = manager.proxy("${co13}")
 
 return config

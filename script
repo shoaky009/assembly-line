@@ -23,6 +23,7 @@ local prefix = string.format(template, repo, branch)
 shell.execute(prefix .. "/src/main.lua")
 shell.execute(prefix .. "/src/manager.lua")
 shell.execute(prefix .. "/src/check-config.lua")
+shell.execute(prefix .. "/src/initialization.lua")
 
 shell.execute("mkdir chest conf recipe tools")
 shell.execute(prefix .. "/src/chest/reader.lua " .. dir .. "/chest/reader.lua")
