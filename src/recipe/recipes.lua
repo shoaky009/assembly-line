@@ -662,6 +662,22 @@ R[41] = {
     }
 }
 
+R[42] = {
+    nickname = "Fusion Reactor Computer MK3",
+    items = {
+        { "gt.blockcasings4.7.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.03.32095.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.03.32095.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.03.32095.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.03.32095.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.22103.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.32677.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32164.name", type = ITEM, amount = 64 },
+        { "gt.blockmachines.wire.superconductoruv.04.name", type = ITEM, amount = 32 },
+        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 20, times = 144 },
+        { "gt.metaitem.01.11320.name", type = MOLTEN, amount = 8, times = 144 }
+    }
+}
 
 function _M.getRecipes()
     return R
