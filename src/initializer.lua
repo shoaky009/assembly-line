@@ -8,9 +8,9 @@ local config = file:read("*a")
 io.close(file)
 
 local ci_flag = false
-local co_count = 0
-local fi_count = 0
-local fif_count = 0
+local co_count = 1
+local fi_count = 1
+local fif_count = 1
 
 thread.create(function()
     while true do
@@ -54,8 +54,8 @@ function Init.start()
 end
 
 function Init.check()
-    if ci_flag and co_count >= 13 and fi_count >= 4 and fif_count >= 4 then
-        local config_file = io.open("./conf/config.lua", "w+")
+    if ci_flag and co_count > 14 and fi_count > 4 and fif_count > 4 then
+        local config_file = io.open("./conf/config.lua", "wb")
         print("write:" .. config)
         config_file:write(config)
         io.close(config_file)
