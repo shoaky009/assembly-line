@@ -20,7 +20,7 @@ thread.create(function()
                 if not ci_flag then
                     config = config:gsub("${ci1}", address)
                     ci_flag = true
-                elseif co_count <= 13 then
+                elseif co_count <= 14 then
                     config = config:gsub(string.format("${co%d}", co_count), address)
                     co_count = co_count + 1
                 elseif fi_count <= 4 then

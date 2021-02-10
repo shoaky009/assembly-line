@@ -35,6 +35,7 @@ config.chestOutput[10] = manager.proxy("${co10}")
 config.chestOutput[11] = manager.proxy("${co11}")
 config.chestOutput[12] = manager.proxy("${co12}")
 config.chestOutput[13] = manager.proxy("${co13}")
+config.chestOutput[14] = manager.proxy("${co14}")
 --me fluid interfaces
 config.fluidInterface[1] = manager.proxy("${fif1}")
 config.fluidInterface[2]= manager.proxy("${fif2}")
