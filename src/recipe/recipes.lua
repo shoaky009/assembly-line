@@ -704,6 +704,94 @@ R[43] = {
     }
 }
 
+R[44] = {
+    nickname = "Electric Piston (UHV)",
+    items = {
+        { "gt.metaitem.01.32596.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.17982.name", type = ITEM, amount = 6 },
+        { "gt.metaitem.01.28982.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.25982.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.23982.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.02.31982.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.02.20982.name", type = ITEM, amount = 4 },
+        { "gt.blockmachines.cable.bedrockium.04.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "fluid.molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2592, cname = "fluid.molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 4000, cname = "fluid.lubricant" }
+    }
+}
+
+R[45] = {
+    nickname = "Conveyor Module (UHV)",
+    items = {
+        { "gt.metaitem.01.32596.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.17982.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.28982.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.25982.name", type = ITEM, amount = 64 },
+        { "gt.blockmachines.cable.bedrockium.04.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "fluid.molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2592, cname = "fluid.molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 4000, cname = "fluid.lubricant" },
+        { "gt.metaitem.99.471.name", type = FLUID, amount = 5760, cname = "fluid.molten.silicone" }
+    }
+}
+
+R[46] = {
+    nickname = "Robot Arm (UHV)",
+    items = {
+        { "gt.metaitem.02.22982.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.02.31982.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.02.20982.name", type = ITEM, amount = 6 },
+        { "gt.metaitem.01.32596.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.01.32648.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.03.32095.name", type = ITEM, amount = 2 },
+        { "gt.metaitem.03.32091.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.03.32090.name", type = ITEM, amount = 8 },
+        { "gt.blockmachines.cable.bedrockium.04.name", type = ITEM, amount = 6 },
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "fluid.molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 4608, cname = "fluid.molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 4000, cname = "fluid.lubricant" },
+    }
+}
+
+R[47] = {
+    nickname = "Emitter (UHV)",
+    items = {
+        { "gt.blockmachines.gt_frame_cosmicneutronium.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.32596.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.23982.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.32726.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.03.32095.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.29320.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29320.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29320.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29320.name", type = ITEM, amount = 64 },
+        { "gt.blockmachines.cable.bedrockium.04.name", type = ITEM, amount = 7 },
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "fluid.molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 4608, cname = "fluid.molten.solderingalloy" }
+    }
+}
+
+R[48] = {
+    nickname = "Sensor (UHV)",
+    items = {
+        { "gt.blockmachines.gt_frame_cosmicneutronium.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.17982.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.23982.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.32726.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.03.32095.name", type = ITEM, amount = 4 },
+        { "gt.metaitem.01.29320.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29320.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29320.name", type = ITEM, amount = 64 },
+        { "gt.metaitem.01.29320.name", type = ITEM, amount = 64 },
+        { "gt.blockmachines.cable.bedrockium.04.name", type = ITEM, amount = 7 },
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "fluid.molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 4608, cname = "fluid.molten.solderingalloy" }
+    }
+}
+
+
+
 function _M.getRecipes()
     return R
 end
