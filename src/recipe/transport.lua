@@ -116,7 +116,8 @@ end
 function _M.getSlotByLabel(label, amount, side)
     local stacks = inputProxy.getAllStacks(side)
     if not stacks then
-        error("place check 'config.chestInput.chestSourceSide' no stacks found")
+        print("place check 'config.chestInput.chestSourceSide' no stacks found")
+        return {}
     end
 
     local slots = {}

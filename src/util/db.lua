@@ -37,16 +37,24 @@ function _M.all()
         input.store(inputSide, i, db.address, dbSlot)
         dbSlot = dbSlot + 1
     end
+    print("done")
 end
 
 function _M.readAll()
-    local msg = "slot:%d --> label:%s"
+    local msg = "slot:%d --> label:%s --> name:%s"
     for i = 1, 81 do
         local data = db.get(i)
         if data then
-            print(string.format(msg, i, data.label))
+            print(string.format(msg, i, data.label, data.name))
         end
     end
+end
+
+function _M.clearAll()
+    for i = 1, 81 do
+        db.clear(i)
+    end
+    print("done")
 end
 
 local functionName;
