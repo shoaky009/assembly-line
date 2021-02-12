@@ -32,10 +32,10 @@ function _M.all()
     local dbSlot = getNilSlot()
     local allStacks = input.getAllStacks(inputSide).getAll()
     for i, v in ipairs(allStacks) do
-        if v.label == nil then
+        if v.name == nil then
             return
         end
-        input.store(inputSide, i, db.address, dbSlot)
+        input.store(inputSide, i + 1, db.address, dbSlot)
         dbSlot = dbSlot + 1
     end
     print("done")
@@ -44,9 +44,9 @@ end
 function _M.readAll()
     local msg = "slot:%d --> label:%s --> identity:%s"
     for i = 1, 81 do
-        local data = db.get(i)
+        local data = db.get(i + 1)
         if data then
-            print(string.format(msg, i, data.label, item_utils.itemIdentity(data)))
+            print(string.format(msg, i + 1, data.label, item_utils.itemIdentity(data)))
         end
     end
 end
