@@ -19,13 +19,13 @@ R[1] = {
 R[2] = {
     nickname = "Electric Motor (LuV)",
     items = {
-        { "gt.metaitem.01.23399.name", type = ITEM, amount = 1 },
-        { "gt.metaitem.02.22374.name", type = ITEM, amount = 2 },
-        { "细钌铱合金导线", type = ITEM, amount = 64 },
-        { "细钌铱合金导线", type = ITEM, amount = 64 },
-        { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
-        { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricant" }
+        { "gregtech:gt.metaitem.01:23399", type = ITEM, amount = 1 },
+        { "gregtech:gt.metaitem.02:22374", type = ITEM, amount = 2 },
+        { "bartworks:gt.bwMetaGeneratedwireFine:90", type = ITEM, amount = 64 },
+        { "bartworks:gt.bwMetaGeneratedwireFine:90", type = ITEM, amount = 64 },
+        { "gregtech:gt.blockmachines:1766", type = ITEM, amount = 2 },
+        { "gregtech:gt.metaitem.01:11314", type = MOLTEN, amount = 1, times = 144 },
+        { "gregtech:gt.metaitem.01:30724", type = FLUID, amount = 250, cname = "lubricant" }
     }
 }
 
@@ -40,7 +40,7 @@ R[3] = {
         { "gt.metaitem.02.21374.name", type = ITEM, amount = 2 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricant" }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "lubricant" }
     }
 }
 
@@ -56,7 +56,7 @@ R[4] = {
         { "gt.metaitem.02.20374.name", type = ITEM, amount = 2 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 4 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricant" }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "lubricant" }
     }
 }
 
@@ -69,8 +69,8 @@ R[5] = {
         { "gt.metaitem.01.25374.name", type = ITEM, amount = 32 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 1, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricant" },
-        { "gt.metaitem.99.635.name", type = FLUID, amount = 1440, cname = "fluid.molten.styrenebutadienerubber" }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "lubricant" },
+        { "gt.metaitem.99.635.name", type = FLUID, amount = 1440, cname = "molten.styrenebutadienerubber" }
     }
 }
 
@@ -89,7 +89,7 @@ R[6] = {
         { "gt.metaitem.03.32085.name", type = ITEM, amount = 8 },
         { "gt.blockmachines.cable.yttriumbariumcuprate.01.name", type = ITEM, amount = 6 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 4, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "fluid.lubricant" }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 250, cname = "lubricant" }
     }
 }
 
@@ -156,8 +156,8 @@ R[10] = {
         { "gt.180k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.180k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.metaitem.01.32615.name", type = ITEM, amount = 1 },
-        { "Coolant Cell", type = FLUID, amount = 2000, cname = "IC2 Coolant" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 720, cname = "fluid.molten.solderingalloy" }
+        { "Coolant Cell", type = FLUID, amount = 2000, cname = "ic2coolant" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 720, cname = "molten.solderingalloy" }
     }
 }
 
@@ -172,8 +172,8 @@ R[11] = {
         { "gt.180k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.180k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.metaitem.01.32615.name", type = ITEM, amount = 1 },
-        { "Coolant Cell", type = FLUID, amount = 2000, cname = "IC2 Coolant" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 720, cname = "fluid.molten.solderingalloy" }
+        { "Coolant Cell", type = FLUID, amount = 2000, cname = "ic2coolant" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 720, cname = "molten.solderingalloy" }
     }
 }
 
@@ -218,7 +218,7 @@ R[14] = {
         { "gt.metaitem.02.19070.name", type = ITEM, amount = 64 },
         { "gt.blockmachines.cable.vanadiumgallium.04.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 2, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "fluid.lubricant" }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "lubricant" }
     }
 }
 
@@ -233,7 +233,7 @@ R[15] = {
         { "gt.metaitem.02.21325.name", type = ITEM, amount = 2 },
         { "gt.blockmachines.cable.vanadiumgallium.04.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 2, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "fluid.lubricant" }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "lubricant" }
     }
 }
 
@@ -249,7 +249,7 @@ R[16] = {
         { "gt.metaitem.02.20325.name", type = ITEM, amount = 2 },
         { "gt.blockmachines.cable.vanadiumgallium.04.name", type = ITEM, amount = 4 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 2, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "fluid.lubricant" }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "lubricant" }
     }
 }
 
@@ -262,8 +262,8 @@ R[17] = {
         { "gt.metaitem.01.25325.name", type = ITEM, amount = 32 },
         { "gt.blockmachines.cable.vanadiumgallium.04.name", type = ITEM, amount = 2 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 2, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "fluid.lubricant" },
-        { "gt.metaitem.99.635.name", type = FLUID, amount = 2880, cname = "fluid.molten.styrenebutadienerubber" }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "lubricant" },
+        { "gt.metaitem.99.635.name", type = FLUID, amount = 2880, cname = "molten.styrenebutadienerubber" }
     }
 }
 
@@ -297,7 +297,7 @@ R[19] = {
         { "gt.metaitem.03.32089.name", type = ITEM, amount = 8 },
         { "gt.blockmachines.cable.vanadiumgallium.04.name", type = ITEM, amount = 6 },
         { "gt.metaitem.01.11314.name", type = MOLTEN, amount = 8, times = 144 },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "fluid.lubricant" }
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 750, cname = "lubricant" }
     }
 }
 
@@ -346,8 +346,8 @@ R[22] = {
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.metaitem.01.32616.name", type = ITEM, amount = 1 },
-        { "Coolant Cell", type = FLUID, amount = 4000, cname = "IC2 Coolant" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 1440, cname = "fluid.molten.solderingalloy" }
+        { "Coolant Cell", type = FLUID, amount = 4000, cname = "ic2coolant" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 1440, cname = "molten.solderingalloy" }
     }
 }
 
@@ -362,8 +362,8 @@ R[23] = {
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.metaitem.01.32616.name", type = ITEM, amount = 1 },
-        { "Coolant Cell", type = FLUID, amount = 4000, cname = "IC2 Coolant" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 1440, cname = "fluid.molten.solderingalloy" }
+        { "Coolant Cell", type = FLUID, amount = 4000, cname = "ic2coolant" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 1440, cname = "molten.solderingalloy" }
     }
 }
 
@@ -426,9 +426,9 @@ R[27] = {
         { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
         { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
         { "gt.blockmachines.cable.naquadahalloy.04.name", type = ITEM, amount = 2 },
-        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "fluid.molten.naquadria" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 1296, cname = "fluid.molten.solderingalloy" },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 2000, cname = "fluid.lubricant" }
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 1296, cname = "molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 2000, cname = "lubricant" }
     }
 }
 
@@ -453,9 +453,9 @@ R[29] = {
         { "gt.metaitem.01.28635.name", type = ITEM, amount = 16 },
         { "gt.metaitem.02.21129.name", type = ITEM, amount = 2 },
         { "gt.blockmachines.cable.naquadahalloy.04.name", type = ITEM, amount = 2 },
-        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "fluid.molten.naquadria" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 1296, cname = "fluid.molten.solderingalloy" },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 2000, cname = "fluid.lubricant" }
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 1296, cname = "molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 2000, cname = "lubricant" }
     }
 }
 
@@ -470,9 +470,9 @@ R[30] = {
         { "gt.metaitem.02.31129.name", type = ITEM, amount = 1 },
         { "gt.metaitem.02.20129.name", type = ITEM, amount = 2 },
         { "gt.blockmachines.cable.naquadahalloy.04.name", type = ITEM, amount = 4 },
-        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "fluid.molten.naquadria" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 1296, cname = "fluid.molten.solderingalloy" },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 2000, cname = "fluid.lubricant" }
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 1296, cname = "molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 2000, cname = "lubricant" }
     }
 }
 
@@ -484,10 +484,10 @@ R[31] = {
         { "gt.metaitem.01.28129.name", type = ITEM, amount = 4 },
         { "gt.metaitem.01.25129.name", type = ITEM, amount = 32 },
         { "gt.blockmachines.cable.naquadahalloy.04.name", type = ITEM, amount = 2 },
-        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "fluid.molten.naquadria" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 1296, cname = "fluid.molten.solderingalloy" },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 2000, cname = "fluid.lubricant" },
-        { "gt.metaitem.99.635.name", type = FLUID, amount = 5760, cname = "fluid.molten.styrenebutadienerubber" }
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 1296, cname = "molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 2000, cname = "lubricant" },
+        { "gt.metaitem.99.635.name", type = FLUID, amount = 5760, cname = "molten.styrenebutadienerubber" }
     }
 }
 
@@ -503,9 +503,9 @@ R[32] = {
         { "gt.metaitem.03.32090.name", type = ITEM, amount = 4 },
         { "gt.metaitem.03.32096.name", type = ITEM, amount = 8 },
         { "gt.blockmachines.cable.naquadahalloy.04.name", type = ITEM, amount = 6 },
-        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "fluid.molten.naquadria" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 2304, cname = "fluid.molten.solderingalloy" },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 2000, cname = "fluid.lubricant" },
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2304, cname = "molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 2000, cname = "lubricant" },
     }
 }
 
@@ -521,8 +521,8 @@ R[33] = {
         { "gt.metaitem.01.29327.name", type = ITEM, amount = 64 },
         { "gt.metaitem.01.29327.name", type = ITEM, amount = 64 },
         { "gt.blockmachines.cable.naquadahalloy.04.name", type = ITEM, amount = 7 },
-        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "fluid.molten.naquadria" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 2304, cname = "fluid.molten.solderingalloy" }
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2304, cname = "molten.solderingalloy" }
     }
 }
 
@@ -538,8 +538,8 @@ R[34] = {
         { "gt.metaitem.01.29327.name", type = ITEM, amount = 64 },
         { "gt.metaitem.01.29327.name", type = ITEM, amount = 64 },
         { "gt.blockmachines.cable.naquadahalloy.04.name", type = ITEM, amount = 7 },
-        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "fluid.molten.naquadria" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 2304, cname = "fluid.molten.solderingalloy" }
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2304, cname = "molten.solderingalloy" }
     }
 }
 
@@ -556,8 +556,8 @@ R[35] = {
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.metaitem.01.32617.name", type = ITEM, amount = 1 },
-        { "Coolant Cell", type = FLUID, amount = 8000, cname = "IC2 Coolant" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 2880, cname = "fluid.molten.solderingalloy" }
+        { "Coolant Cell", type = FLUID, amount = 8000, cname = "ic2coolant" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2880, cname = "molten.solderingalloy" }
     }
 }
 
@@ -574,8 +574,8 @@ R[36] = {
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.360k_Helium_Coolantcell.name", type = ITEM, amount = 1 },
         { "gt.metaitem.01.32617.name", type = ITEM, amount = 1 },
-        { "Coolant Cell", type = FLUID, amount = 8000, cname = "IC2 Coolant" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 2880, cname = "fluid.molten.solderingalloy" }
+        { "Coolant Cell", type = FLUID, amount = 8000, cname = "ic2coolant" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2880, cname = "molten.solderingalloy" }
     }
 }
 
@@ -590,8 +590,8 @@ R[37] = {
         { "gt.metaitem.01.29635.name", type = ITEM, amount = 32 },
         { "gt.metaitem.01.26374.name", type = ITEM, amount = 32 },
         { "gt.metaitem.01.30609.name", type = FLUID, amount = 250, cname = "fluid.growthmediumsterilized" },
-        { "UuMatter Cell", type = FLUID, amount = 250, cname = "UU-Matter" },
-        { "Coolant Cell", type = FLUID, amount = 1000, cname = "IC2 Coolant" }
+        { "UuMatter Cell", type = FLUID, amount = 250, cname = "ic2uumatter" },
+        { "Coolant Cell", type = FLUID, amount = 1000, cname = "ic2coolant" }
     }
 }
 
@@ -608,8 +608,8 @@ R[38] = {
         { "gt.metaitem.03.32039.name", type = ITEM, amount = 48 },
         { "gt.blockmachines.wire.superconductorzpm.02.name", type = ITEM, amount = 64 },
         { "gt.metaitem.01.29471.name", type = ITEM, amount = 64 },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 2880, cname = "fluid.molten.solderingalloy" },
-        { "Coolant Cell", type = FLUID, amount = 10000, cname = "IC2 Coolant" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2880, cname = "molten.solderingalloy" },
+        { "Coolant Cell", type = FLUID, amount = 10000, cname = "ic2coolant" },
         { "gt.metaitem.01.30093.name", type = FLUID, amount = 2500, cname = "fluid.radon" }
     }
 }
@@ -629,8 +629,8 @@ R[39] = {
         { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
         { "gt.metaitem.02.19103.name", type = ITEM, amount = 64 },
         { "gt.blockmachines.cable.naquadahalloy.04.name", type = ITEM, amount = 8 },
-        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "fluid.molten.naquadria" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 2304, cname = "fluid.molten.solderingalloy" }
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 1296, cname = "molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2304, cname = "molten.solderingalloy" }
     }
 }
 
@@ -650,9 +650,9 @@ R[40] = {
         { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
         { "gt.metaitem.02.19129.name", type = ITEM, amount = 64 },
         { "gt.blockmachines.cable.bedrockium.04.name", type = ITEM, amount = 2 },
-        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "fluid.molten.naquadria" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 2592, cname = "fluid.molten.solderingalloy" },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 4000, cname = "fluid.lubricant" }
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2592, cname = "molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 4000, cname = "lubricant" }
     }
 }
 
@@ -666,9 +666,9 @@ R[41] = {
         { "gt.metaitem.01.28471.name", type = ITEM, amount = 32 },
         { "gt.metaitem.02.21982.name", type = ITEM, amount = 4 },
         { "gt.blockmachines.cable.bedrockium.04.name", type = ITEM, amount = 2 },
-        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "fluid.molten.naquadria" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 2592, cname = "fluid.molten.solderingalloy" },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 4000, cname = "fluid.lubricant" }
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2592, cname = "molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 4000, cname = "lubricant" }
     }
 }
 
@@ -699,7 +699,7 @@ R[43] = {
         { "gt.metaitem.01.32695.name", type = ITEM, amount = 9 },
         { "gt.metaitem.01.32675.name", type = ITEM, amount = 9 },
         { "gt.metaitem.01.27070.name", type = ITEM, amount = 36 },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 2592, cname = "fluid.molten.solderingalloy" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2592, cname = "molten.solderingalloy" },
         { "氖单元", type = FLUID, amount = 20000, cname = "fluid.Neon" }
     }
 }
@@ -715,9 +715,9 @@ R[44] = {
         { "gt.metaitem.02.31982.name", type = ITEM, amount = 2 },
         { "gt.metaitem.02.20982.name", type = ITEM, amount = 4 },
         { "gt.blockmachines.cable.bedrockium.04.name", type = ITEM, amount = 4 },
-        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "fluid.molten.naquadria" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 2592, cname = "fluid.molten.solderingalloy" },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 4000, cname = "fluid.lubricant" }
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2592, cname = "molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 4000, cname = "lubricant" }
     }
 }
 
@@ -729,10 +729,10 @@ R[45] = {
         { "gt.metaitem.01.28982.name", type = ITEM, amount = 8 },
         { "gt.metaitem.01.25982.name", type = ITEM, amount = 64 },
         { "gt.blockmachines.cable.bedrockium.04.name", type = ITEM, amount = 2 },
-        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "fluid.molten.naquadria" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 2592, cname = "fluid.molten.solderingalloy" },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 4000, cname = "fluid.lubricant" },
-        { "gt.metaitem.99.471.name", type = FLUID, amount = 5760, cname = "fluid.molten.silicone" }
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 2592, cname = "molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 4000, cname = "lubricant" },
+        { "gt.metaitem.99.471.name", type = FLUID, amount = 5760, cname = "molten.silicone" }
     }
 }
 
@@ -748,9 +748,9 @@ R[46] = {
         { "gt.metaitem.03.32091.name", type = ITEM, amount = 4 },
         { "gt.metaitem.03.32090.name", type = ITEM, amount = 8 },
         { "gt.blockmachines.cable.bedrockium.04.name", type = ITEM, amount = 6 },
-        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "fluid.molten.naquadria" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 4608, cname = "fluid.molten.solderingalloy" },
-        { "gt.metaitem.01.30724.name", type = FLUID, amount = 4000, cname = "fluid.lubricant" },
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 4608, cname = "molten.solderingalloy" },
+        { "gt.metaitem.01.30724.name", type = FLUID, amount = 4000, cname = "lubricant" },
     }
 }
 
@@ -767,8 +767,8 @@ R[47] = {
         { "gt.metaitem.01.29320.name", type = ITEM, amount = 64 },
         { "gt.metaitem.01.29320.name", type = ITEM, amount = 64 },
         { "gt.blockmachines.cable.bedrockium.04.name", type = ITEM, amount = 7 },
-        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "fluid.molten.naquadria" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 4608, cname = "fluid.molten.solderingalloy" }
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 4608, cname = "molten.solderingalloy" }
     }
 }
 
@@ -785,8 +785,8 @@ R[48] = {
         { "gt.metaitem.01.29320.name", type = ITEM, amount = 64 },
         { "gt.metaitem.01.29320.name", type = ITEM, amount = 64 },
         { "gt.blockmachines.cable.bedrockium.04.name", type = ITEM, amount = 7 },
-        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "fluid.molten.naquadria" },
-        { "gt.metaitem.99.314.name", type = FLUID, amount = 4608, cname = "fluid.molten.solderingalloy" }
+        { "gt.metaitem.99.327.name", type = FLUID, amount = 2592, cname = "molten.naquadria" },
+        { "gt.metaitem.99.314.name", type = FLUID, amount = 4608, cname = "molten.solderingalloy" }
     }
 }
 

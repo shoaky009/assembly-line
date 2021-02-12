@@ -1,5 +1,6 @@
 local config = require("conf.config")
 local cp = require("component")
+local item_utils = require("util.item_utils")
 local shell = require "shell"
 local input = config.chestInput.proxy
 local inputSide = config.chestInput.chestSourceSide
@@ -41,11 +42,11 @@ function _M.all()
 end
 
 function _M.readAll()
-    local msg = "slot:%d --> label:%s --> name:%s"
+    local msg = "slot:%d --> label:%s --> identity:%s"
     for i = 1, 81 do
         local data = db.get(i)
         if data then
-            print(string.format(msg, i, data.label, data.name))
+            print(string.format(msg, i, data.label, item_utils.itemIdentity(data)))
         end
     end
 end

@@ -2,6 +2,7 @@ local _M = {}
 local config = require("conf.config")
 local sides = require("sides")
 local manager = require("manager")
+local item_utils = require("util.item_utils")
 local fluidSourceSide = config.fluidSourceSide
 local tankSourceSide = config.tankSourceSide
 
@@ -23,36 +24,37 @@ function _M.transFluid(recipeFluid, inputBusSlot)
     end
 
     local conf = fluidInterface.getFluidInterfaceConfiguration(1)
-    local cellLabel = recipeFluid[1]
-    local fluidLabel = recipeFluid.cname
+    local identity = recipeFluid[1]
+    local fluidName = recipeFluid.cname
     --配置与配方不一样或者没有
-    if not conf or conf.label ~= fluidLabel then
+    if not conf or conf.name ~= fluidName then
+        print(conf.name)
         --set all config the same
         local db = manager.getFluidDatabase()
-        local index = manager.getFluidIndexByLabel(cellLabel)
+        local index = manager.getFluidIndexByIdentity(identity)
         if not index then
             --local craftable = fluidInterface.getCraftables({name = label})
             --print(craftable)
-            error("fluid:" .. cellLabel .. " not in the db")
+            error("fluid --->" .. identity .. " not in the db")
         end
-        print("set fluid interface slot:" .. inputBusSlot .. " label:" .. cellLabel)
+        print("set fluid interface slot:" .. inputBusSlot .. " label:" .. identity)
         if conf then
-            print(conf.label)
+            print(conf.name)
         end
         local success = fluidInterface.setFluidInterfaceConfiguration(1, db.address, index)
         if not success then
-            error("set fluid interface failed, label:" .. cellLabel .. "db index:" .. index)
+            error("set fluid interface failed, label:" .. identity .. "db index:" .. index)
         end
 
         while true do
             local fluid = fluidInput.getFluidInTank(0, 1)
-            if fluid and fluid.label == fluidLabel then
+            if fluid and fluid.name == fluidName then
                 break
             end
-            if fluid and fluid.label then
-                print("fluid interface:" .. inputBusSlot .. ", current fluid is " .. fluid.label .. ", need:" .. fluidLabel)
+            if fluid and fluid.name then
+                print("fluid interface:" .. inputBusSlot .. ", current fluid is " .. fluid.name .. ", need:" .. fluidName)
             else
-                print("fluid interface:" .. inputBusSlot .. ", not enough fluid, need:" .. fluidLabel)
+                print("fluid interface:" .. inputBusSlot .. ", not enough fluid, need:" .. fluidName)
             end
             os.sleep(0.8)
         end
@@ -65,7 +67,7 @@ function _M.transFluid(recipeFluid, inputBusSlot)
         if amount <= 0 then
             break
         end
-        print("slot " .. inputBusSlot .. " not enough fluid:" .. fluidLabel)
+        print("slot " .. inputBusSlot .. " not enough fluid:" .. fluidName)
         os.sleep(2)
     end
 end
@@ -83,8 +85,8 @@ function _M.transCell(recipeItem, fluidSlot)
     _M.trans(recipeItem[1], recipeItem.amount, moltenOutputSide)
 end
 
-function _M.trans(label, amount, outputSide)
-    local sourceSlots = _M.getSlotByLabel(label, amount, chestSourceSide)
+function _M.trans(identity, amount, outputSide)
+    local sourceSlots = _M.getSlotByIdentity(identity, amount, chestSourceSide)
     local outputSlot = _M.getAvailableOutputSlot(outputSide)
     for _, v in ipairs(sourceSlots) do
         local transferred = inputProxy.transferItem(chestSourceSide, outputSide, v.size, v.slot, outputSlot) or 0
@@ -113,7 +115,7 @@ function _M.getAvailableOutputSlot(side)
     end
 end
 
-function _M.getSlotByLabel(label, amount, side)
+function _M.getSlotByIdentity(identity, amount, side)
     local stacks = inputProxy.getAllStacks(side)
     if not stacks then
         print("place check 'config.chestInput.chestSourceSide' no stacks found")
@@ -122,7 +124,7 @@ function _M.getSlotByLabel(label, amount, side)
 
     local slots = {}
     for i, v in pairs(stacks.getAll()) do
-        if v and v.label == label then
+        if v and item_utils.itemIdentity(v) == identity then
             local item = { slot = i + 1 }
             table.insert(slots, item)
             if v.size >= amount then
@@ -173,7 +175,7 @@ function _M.transOutput(slot, item)
         os.sleep(1)
     end
     --默认底部和顶部
-    local sourceSlots = _M.getSlotByLabel(item[1], item.amount, chestOutputSide)
+    local sourceSlots = _M.getSlotByIdentity(item[1], item.amount, chestOutputSide)
     for _, v in ipairs(sourceSlots) do
         output.transferItem(0, 1, v.size, v.slot, 1)
     end

@@ -1,5 +1,6 @@
 local _M = {}
 local recipes = require("recipe.recipes")
+local item_utils = require("util.item_utils")
 
 function _M.match(sourceItems)
     if sourceItems == nil or not type(sourceItems) == "table" then
@@ -9,16 +10,15 @@ function _M.match(sourceItems)
     local r = recipes.getRecipes()
     local source = {}
     for _, v in pairs(sourceItems) do
-        local label = v.label
-        if label then
-            local var0 = source[label]
+        local name = v.name
+        if name then
+            local identity = item_utils.itemIdentity(v)
+            local var0 = source[identity]
             if var0 then
-                source[label] = var0 + v.size
+                source[identity] = var0 + v.size
             else
-                source[label] = v.size
+                source[identity] = v.size
             end
-        --else
-        --    break
         end
     end
 

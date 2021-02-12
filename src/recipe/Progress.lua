@@ -32,7 +32,6 @@ function _M:start()
             self:transRecipeMolten(v)
         elseif type == "fluid" then
             fluidSlot = fluidSlot + 1
-            self.suckSlot[fluidSlot] = v.amount
             self:transRecipeFluid(v, fluidSlot)
         elseif type == "cell" then
             fluidSlot = fluidSlot + 1

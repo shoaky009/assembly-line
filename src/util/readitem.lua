@@ -6,11 +6,26 @@ local _M = {}
 local input = config.chestInput.proxy
 local inputSide = config.chestInput.chestSourceSide
 
+local function readData(data)
+    if type(data) == "table" then
+        for k, v in pairs(data) do
+            print(k .. ":" .. tostring(v))
+        end
+    else
+        print(data)
+    end
+
+end
+
 function _M.default()
     local stacks = input.getAllStacks(inputSide)
     for k, v in pairs(stacks.getAll()) do
-        if v.label then
-            print("slot:" .. k .. " label:" .. v.label)
+        if v.name then
+            local identity = v.name
+            if v.damage then
+                identity = identity .. ":" .. v.damage
+            end
+            print("slot:" .. k .. " identity ---> " .. identity)
         end
     end
 end
@@ -18,9 +33,14 @@ end
 function _M.allInfo()
     local item = input.getStackInSlot(inputSide, 1)
     if item then
-        for k, v in pairs(item) do
-            print(k .. ":" .. tostring(v))
-        end
+        readData(item)
+    end
+end
+
+function _M.readFluid()
+    local fluid = input.getFluidInTank(1, 1)
+    if fluid then
+        readData(fluid)
     end
 end
 
