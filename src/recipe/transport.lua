@@ -34,7 +34,7 @@ function _M.transFluid(recipeFluid, inputBusSlot)
         if not index then
             --local craftable = fluidInterface.getCraftables({name = label})
             --print(craftable)
-            error("fluid --->" .. identity .. " not in the db")
+            error("fluid --->" .. identity .. " is not stored in the db")
         end
         print("set fluid interface slot:" .. inputBusSlot .. " label:" .. identity)
         if conf then
