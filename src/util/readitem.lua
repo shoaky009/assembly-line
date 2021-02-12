@@ -1,5 +1,6 @@
 local config = require("conf.config")
 local shell = require("shell")
+local item_utils = require("util.item_utils")
 local args, _ = shell.parse(...)
 
 local _M = {}
@@ -21,11 +22,7 @@ function _M.default()
     local stacks = input.getAllStacks(inputSide)
     for k, v in pairs(stacks.getAll()) do
         if v.name then
-            local identity = v.name
-            if v.damage then
-                identity = identity .. ":" .. v.damage
-            end
-            print("slot:" .. k .. " identity ---> " .. identity)
+            print("slot:" .. k .. " identity ---> " .. item_utils.itemIdentity(v))
         end
     end
 end
