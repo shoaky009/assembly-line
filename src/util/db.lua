@@ -1,9 +1,9 @@
 local config = require("conf.config")
+local cp = require("component")
+local shell = require "shell"
 local input = config.chestInput.proxy
 local inputSide = config.chestInput.chestSourceSide
-local cp = require("component")
 local db = cp.database
-local shell = require "shell"
 local args, _ = shell.parse(...)
 
 local function getNilSlot()
