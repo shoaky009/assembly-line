@@ -32,6 +32,7 @@ function _M:start()
             self:transRecipeMolten(v)
         elseif type == "fluid" then
             fluidSlot = fluidSlot + 1
+            --TODO fluid concurrently
             self:transRecipeFluid(v, fluidSlot)
         elseif type == "cell" then
             fluidSlot = fluidSlot + 1
