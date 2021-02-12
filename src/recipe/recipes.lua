@@ -198,8 +198,8 @@ R[13] = {
     nickname = "Heavy-DutyAlloyIngotT5",
     items = {
         { "dreamcraft:item.HeavyDutyPlateTier4.0", type = ITEM, amount = 1 },
-        { "dreamcraft:item.QuantiumCompressedPlate.0", type = ITEM, amount = 4 },
-        { "dreamcraft:item.QuantiumCompressedPlate.0", type = ITEM, amount = 4 },
+        { "dreamcraft:item.QuantinumCompressedPlate.0", type = ITEM, amount = 4 },
+        { "dreamcraft:item.QuantinumCompressedPlate.0", type = ITEM, amount = 4 },
         { "gregtech:gt.metaitem.01.26070", type = ITEM, amount = 8 },
         { "gregtech:gt.metaitem.01.23314", type = MOLTEN, amount = 1, times = 72 }
     }
@@ -337,7 +337,7 @@ R[21] = {
 R[22] = {
     nickname = "Energy Hatch (ZPM)",
     items = {
-        { "gregtech:gt.blockmachines.07.name", type = ITEM, amount = 1 },
+        { "gregtech:gt.blockmachines.07", type = ITEM, amount = 1 },
         { "gregtech:gt.blockmachines.2421", type = ITEM, amount = 2 },
         { "gregtech:gt.metaitem.03.32161", type = ITEM, amount = 2 },
         { "gregtech:gt.metaitem.03.32088", type = ITEM, amount = 2 },
@@ -353,7 +353,7 @@ R[22] = {
 R[23] = {
     nickname = "Dynamo Hatch (ZPM)",
     items = {
-        { "gregtech:gt.blockmachines.07.name", type = ITEM, amount = 1 },
+        { "gregtech:gt.blockmachines.07", type = ITEM, amount = 1 },
         { "gregtech:gt.metaitem.02.24992", type = ITEM, amount = 4 },
         { "gregtech:gt.metaitem.03.32161", type = ITEM, amount = 2 },
         { "gregtech:gt.metaitem.03.32088", type = ITEM, amount = 2 },
@@ -545,7 +545,7 @@ R[34] = {
 R[35] = {
     nickname = "Energy Hatch (UV)",
     items = {
-        { "gregtech:gt.blockmachines.08.name", type = ITEM, amount = 1 },
+        { "gregtech:gt.blockmachines.18", type = ITEM, amount = 1 },
         { "gregtech:gt.blockmachines.2441", type = ITEM, amount = 2 },
         { "gregtech:gt.metaitem.03.32163", type = ITEM, amount = 2 },
         { "gregtech:gt.metaitem.03.32091", type = ITEM, amount = 2 },
@@ -563,7 +563,7 @@ R[35] = {
 R[36] = {
     nickname = "Dynamo Hatch (UV)",
     items = {
-        { "gregtech:gt.blockmachines.08.name", type = ITEM, amount = 1 },
+        { "gregtech:gt.blockmachines.08", type = ITEM, amount = 1 },
         { "gregtech:gt.metaitem.02.24986", type = ITEM, amount = 2 },
         { "gregtech:gt.metaitem.03.32163", type = ITEM, amount = 2 },
         { "gregtech:gt.metaitem.03.32091", type = ITEM, amount = 2 },
@@ -731,7 +731,7 @@ R[45] = {
         { "gregtech:gt.metaitem.99.327", type = FLUID, amount = 2592, cname = "molten.naquadria" },
         { "gregtech:gt.metaitem.99.314", type = FLUID, amount = 2592, cname = "molten.solderingalloy" },
         { "gregtech:gt.metaitem.01.30724", type = FLUID, amount = 4000, cname = "lubricant" },
-        { "gt.metaitem.99.471.name", type = FLUID, amount = 5760, cname = "molten.silicone" }
+        { "gregtech:gt.metaitem.99.471", type = FLUID, amount = 5760, cname = "molten.silicone" }
     }
 }
 

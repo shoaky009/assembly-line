@@ -28,7 +28,6 @@ function _M.transFluid(recipeFluid, inputBusSlot)
     local fluidName = recipeFluid.cname
     --配置与配方不一样或者没有
     if not conf or conf.name ~= fluidName then
-        print(conf.name)
         --set all config the same
         local db = manager.getFluidDatabase()
         local index = manager.getFluidIndexByIdentity(identity)
