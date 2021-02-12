@@ -776,8 +776,8 @@ R[48] = {
     nickname = "Sensor (UHV)",
     items = {
         { "gt.blockmachines.gt_frame_cosmicneutronium.name", type = ITEM, amount = 1 },
-        { "gt.metaitem.01.17982.name", type = ITEM, amount = 1 },
-        { "gt.metaitem.01.23982.name", type = ITEM, amount = 8 },
+        { "gt.metaitem.01.32596.name", type = ITEM, amount = 1 },
+        { "gt.metaitem.01.17982.name", type = ITEM, amount = 8 },
         { "gt.metaitem.01.32726.name", type = ITEM, amount = 8 },
         { "gt.metaitem.03.32095.name", type = ITEM, amount = 4 },
         { "gt.metaitem.01.29320.name", type = ITEM, amount = 64 },

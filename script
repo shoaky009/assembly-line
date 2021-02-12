@@ -32,7 +32,7 @@ shell.execute(prefix .. "/src/recipe/matcher.lua "   .. dir .. "/recipe/matcher.
 shell.execute(prefix .. "/src/recipe/Progress.lua "   .. dir .. "/recipe/Progress.lua")
 shell.execute(prefix .. "/src/recipe/recipes.lua "  .. dir .. "/recipe/recipes.lua")
 shell.execute(prefix .. "/src/recipe/transport.lua "  .. dir .. "/recipe/transport.lua")
-shell.execute(prefix .. "/src/tools/db.lua "  .. dir .. "/tools/db.lua")
-shell.execute(prefix .. "/src/tools/readlabel.lua "  .. dir .. "/tools/readlabel.lua")
+shell.execute(prefix .. "/src/util/db.lua "  .. dir .. "/util/db.lua")
+shell.execute(prefix .. "/src/util/readlabel.lua "  .. dir .. "/util/readlabel.lua")
 
 print("installed successfully! plz read https://github.com/shoaky009/assembly-line/blob/master/README.md, and edit conf/config.lua make it work")

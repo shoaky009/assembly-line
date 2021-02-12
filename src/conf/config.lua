@@ -1,6 +1,8 @@
 local config = {
     chestInput = {},
     chestOutput = {},
+    fluidInput = {},
+    fluidInterface = {},
     chestOutputMode = true
 }
 local manager = require("manager")
