@@ -24,7 +24,7 @@ shell.execute(prefix .. "/src/main.lua")
 shell.execute(prefix .. "/src/manager.lua")
 shell.execute(prefix .. "/src/initializer.lua")
 
-shell.execute("mkdir chest conf recipe tools")
+shell.execute("mkdir chest conf recipe util")
 shell.execute(prefix .. "/src/chest/reader.lua " .. dir .. "/chest/reader.lua")
 shell.execute(prefix .. "/src/conf/config.lua "  .. dir .. "/conf/config.lua")
 shell.execute(prefix .. "/src/recipe/matcher.lua "   .. dir .. "/recipe/matcher.lua")
