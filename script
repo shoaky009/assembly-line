@@ -22,7 +22,6 @@ shell.setWorkingDirectory(dir)
 local prefix = string.format(template, repo, branch)
 shell.execute(prefix .. "/src/main.lua")
 shell.execute(prefix .. "/src/manager.lua")
-shell.execute(prefix .. "/src/check-config.lua")
 shell.execute(prefix .. "/src/initializer.lua")
 
 shell.execute("mkdir chest conf recipe tools")
@@ -33,6 +32,6 @@ shell.execute(prefix .. "/src/recipe/Progress.lua "   .. dir .. "/recipe/Progres
 shell.execute(prefix .. "/src/recipe/recipes.lua "  .. dir .. "/recipe/recipes.lua")
 shell.execute(prefix .. "/src/recipe/transport.lua "  .. dir .. "/recipe/transport.lua")
 shell.execute(prefix .. "/src/util/db.lua "  .. dir .. "/util/db.lua")
-shell.execute(prefix .. "/src/util/readlabel.lua "  .. dir .. "/util/readlabel.lua")
+shell.execute(prefix .. "/src/util/item_utils.lua "  .. dir .. "/util/item_utils.lua")
 
 print("installed successfully! plz read https://github.com/shoaky009/assembly-line/blob/master/README.md, and edit conf/config.lua make it work")
