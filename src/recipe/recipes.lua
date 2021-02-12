@@ -605,7 +605,7 @@ R[38] = {
         { "gregtech:gt.metaitem.03.32026", type = ITEM, amount = 16 },
         { "gregtech:gt.metaitem.03.32025", type = ITEM, amount = 16 },
         { "gregtech:gt.metaitem.03.32039", type = ITEM, amount = 48 },
-        { "gregtech:gt.blockmachines.2421", type = ITEM, amount = 64 },
+        { "gregtech:gt.blockmachines.2420", type = ITEM, amount = 64 },
         { "gregtech:gt.metaitem.01.29471", type = ITEM, amount = 64 },
         { "gregtech:gt.metaitem.99.314", type = FLUID, amount = 2880, cname = "molten.solderingalloy" },
         { "IC2:itemCellEmpty.9", type = FLUID, amount = 10000, cname = "ic2coolant" },

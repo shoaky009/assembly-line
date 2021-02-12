@@ -33,5 +33,6 @@ shell.execute(prefix .. "/src/recipe/recipes.lua "  .. dir .. "/recipe/recipes.l
 shell.execute(prefix .. "/src/recipe/transport.lua "  .. dir .. "/recipe/transport.lua")
 shell.execute(prefix .. "/src/util/db.lua "  .. dir .. "/util/db.lua")
 shell.execute(prefix .. "/src/util/item_utils.lua "  .. dir .. "/util/item_utils.lua")
+shell.execute(prefix .. "/src/util/readitem.lua "  .. dir .. "/util/readitem.lua")
 
 print("installed successfully! plz read https://github.com/shoaky009/assembly-line/blob/master/README.md, and edit conf/config.lua make it work")
