@@ -609,7 +609,7 @@ R[38] = {
         { "gregtech:gt.metaitem.01.29471", type = ITEM, amount = 64 },
         { "gregtech:gt.metaitem.99.314", type = FLUID, amount = 2880, cname = "molten.solderingalloy" },
         { "IC2:itemCellEmpty.9", type = FLUID, amount = 10000, cname = "ic2coolant" },
-        { "gregtech:gt.metaitem.01.30093", type = FLUID, amount = 2500, cname = "fluid.radon" }
+        { "gregtech:gt.metaitem.01.30093", type = FLUID, amount = 2500, cname = "radon" }
     }
 }
 
@@ -699,7 +699,7 @@ R[43] = {
         { "gregtech:gt.metaitem.01.32675", type = ITEM, amount = 9 },
         { "gregtech:gt.metaitem.01.27070", type = ITEM, amount = 36 },
         { "gregtech:gt.metaitem.99.314", type = FLUID, amount = 2592, cname = "molten.solderingalloy" },
-        { "bartworks:gt.bwMetaGeneratedcell.41", type = FLUID, amount = 20000, cname = "fluid.Neon" }
+        { "bartworks:gt.bwMetaGeneratedcell.41", type = FLUID, amount = 20000, cname = "neon" }
     }
 }
 
