@@ -25,6 +25,7 @@ script
 > 4.4个me流体接口
 > 
 > 设置完成后系统会自动重启
+> 再次说明顺序很重要中途有任何错误都会导致程序无法运行 如果放错清ctrl+c退出重新来过
 
 ####1.2设置transposer与原材料箱的面
 >具体sides的定义查看官网API https://ocdoc.cil.li/api:sides
