@@ -35,7 +35,7 @@ function _M.allInfo()
 end
 
 function _M.readFluid()
-    local fluid = input.getFluidInTank(1, 1)
+    local fluid = input.getFluidInTank(inputSide, 1)
     if fluid then
         readData(fluid)
     end
