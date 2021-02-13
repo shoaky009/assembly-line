@@ -111,6 +111,10 @@ config.fluidSourceSide = sides.bottom
 >6.安装完毕正常运行后不要拆除任何oc的组件 否则地址会更变 你需要手动修改或者拆除所有oc转运器和me流体接口config.lua需要重新下载 然后运行initializer
 > 进行安装
 
+>7.并非所有配方的流体都可以用MOLTEN来处理比如第一个槽是FLUID类型的第二个MOLTEN就不行
+
+>8.配方中所有关于电路板的都是晶体,EV的是量子 如果不一样可以自己去修改对应配方
+
 ##参考视频
 https://www.bilibili.com/video/BV1iz4y1274d/
 
