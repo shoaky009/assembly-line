@@ -5,6 +5,7 @@ local recipeMatcher = require("recipe.matcher")
 local progress = require("recipe.Progress")
 local computer = require("computer")
 local config = require("conf.config")
+local rsSide = config.redStoneSide
 local rs = require("component").redstone
 processing = false
 
@@ -23,7 +24,7 @@ function Main.start()
 end
 
 function Main.loop()
-    if processing or rs.getInput(3) > 0 then
+    if processing or rs.getInput(rsSide) > 0 then
         print("processing item...")
         return
     end

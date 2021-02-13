@@ -17,6 +17,8 @@ config.chestInput.moltenOutputSide = sides.west
 --fluid source side
 config.fluidSourceSide = 0
 config.tankSourceSide = sides.west
+--rs. side
+config.redStoneSide = 3
 --transposer
 config.chestInput.proxy = manager.proxy("${ci1}")
 config.fluidInput[1] = manager.proxy("${fi1}")
