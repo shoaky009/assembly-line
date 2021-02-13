@@ -11,6 +11,7 @@ local ci_flag = false
 local co_count = 1
 local fi_count = 1
 local fif_count = 1
+local input_number = 14
 
 thread.create(function()
     while true do
@@ -20,7 +21,7 @@ thread.create(function()
                 if not ci_flag then
                     config = config:gsub("${ci1}", address)
                     ci_flag = true
-                elseif co_count <= 14 then
+                elseif co_count <= input_number then
                     config = config:gsub(string.format("${co%d}", co_count), address)
                     co_count = co_count + 1
                 elseif fi_count <= 4 then
@@ -54,7 +55,7 @@ function Init.start()
 end
 
 function Init.check()
-    if ci_flag and co_count > 14 and fi_count > 4 and fif_count > 4 then
+    if ci_flag and co_count > input_number and fi_count > 4 and fif_count > 4 then
         local config_file = io.open("./conf/config.lua", "wb")
         print("write:" .. config)
         config_file:write(config)
