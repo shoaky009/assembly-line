@@ -31,7 +31,7 @@ function Main.loop()
     if hasItem then
         local recipe = recipeMatcher.match(all)
         if not recipe then
-            print(computer.uptime() .. "no recipe match")
+            --print(computer.uptime() .. "no recipe match")
             return
         end
         local pg = progress:new(recipe)
