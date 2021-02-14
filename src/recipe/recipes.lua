@@ -588,7 +588,7 @@ R[37] = {
         { "gregtech:gt.metaitem.02.18320", type = ITEM, amount = 4 },
         { "gregtech:gt.metaitem.01.29635", type = ITEM, amount = 32 },
         { "gregtech:gt.metaitem.01.26374", type = ITEM, amount = 32 },
-        { "gregtech:gt.metaitem.01.30609", type = FLUID, amount = 250, cname = "fluid.growthmediumsterilized" },
+        { "gregtech:gt.metaitem.01.30609", type = FLUID, amount = 250, cname = "growthmediumsterilized" },
         { "IC2:itemCellEmpty.3", type = FLUID, amount = 250, cname = "ic2uumatter" },
         { "IC2:itemCellEmpty.9", type = FLUID, amount = 1000, cname = "ic2coolant" }
     }
