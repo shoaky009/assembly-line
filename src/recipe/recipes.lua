@@ -811,6 +811,28 @@ R[49] = {
     }
 }
 
+R[50] = {
+    nickname = "Energy Hatch (UHV)",
+    items = {
+        { "gregtech:gt.blockmachines.19", type = ITEM, amount = 1 },
+        { "gregtech:gt.blockmachines.2022", type = ITEM, amount = 2 },
+        { "gregtech:gt.metaitem.03.32165", type = ITEM, amount = 2 },
+        { "gregtech:gt.metaitem.03.32095", type = ITEM, amount = 2 },
+        { "gregtech:gt.metaitem.03.32149", type = ITEM, amount = 2 },
+        { "gregtech:gt.360k_Helium_Coolantcell.0", type = ITEM, amount = 1 },
+        { "gregtech:gt.360k_Helium_Coolantcell.0", type = ITEM, amount = 1 },
+        { "gregtech:gt.360k_Helium_Coolantcell.0", type = ITEM, amount = 1 },
+        { "gregtech:gt.360k_Helium_Coolantcell.0", type = ITEM, amount = 1 },
+        { "gregtech:gt.360k_Helium_Coolantcell.0", type = ITEM, amount = 1 },
+        { "gregtech:gt.360k_Helium_Coolantcell.0", type = ITEM, amount = 1 },
+        { "gregtech:gt.360k_Helium_Coolantcell.0", type = ITEM, amount = 1 },
+        { "gregtech:gt.360k_Helium_Coolantcell.0", type = ITEM, amount = 1 },
+        { "gregtech:gt.metaitem.01.32618", type = ITEM, amount = 1 },
+        { "IC2:itemCellEmpty.9", type = FLUID, amount = 16000, cname = "ic2coolant" },
+        { "gregtech:gt.metaitem.99.314", type = FLUID, amount = 5760, cname = "molten.solderingalloy" }
+    }
+}
+
 
 
 function _M.getRecipes()
