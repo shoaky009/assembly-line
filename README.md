@@ -25,7 +25,7 @@ script
 > 4.4个me流体接口
 > 
 > 设置完成后系统会自动重启
-> 再次说明顺序很重要中途有任何错误都会导致程序无法运行 如果放错清ctrl+c退出重新来过
+> 再次说明顺序很重要中途有任何错误都会导致程序无法运行 如果放错请ctrl+c退出重新来过
 
 ####1.2设置transposer与原材料箱的面
 >具体sides的定义查看官网API https://ocdoc.cil.li/api:sides
@@ -73,6 +73,7 @@ config.fluidSourceSide = sides.bottom
 4.4 fluid根据label会去db中查询对应的index,然后自动设置流体输出总线的对应输出流体
 
 ###5.util说明
+
 5.1 db.lua
 ```shell
     #存储源材料箱第一个位置的物品到database
