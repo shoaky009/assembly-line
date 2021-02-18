@@ -7,7 +7,6 @@ function _M.match(sourceItems)
         return nil
     end
 
-    local r = recipes.getRecipes()
     local source = {}
     for _, v in pairs(sourceItems) do
         local name = v.name
@@ -22,6 +21,7 @@ function _M.match(sourceItems)
         end
     end
 
+    local r = recipes.getRecipes()
     for _, v in pairs(r) do
         local flag = true
         for __, item in pairs(v.items) do

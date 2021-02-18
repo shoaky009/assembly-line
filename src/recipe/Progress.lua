@@ -2,6 +2,7 @@ local setmetatable = setmetatable
 local transport = require("recipe.transport")
 local computer = require("computer")
 local config = require("conf.config")
+local thread = require("thread")
 
 local _M = {}
 
@@ -21,6 +22,7 @@ end
 function _M:start()
     print(self.processItem.nickname .. " processing")
     local fluidSlot = 0
+    local fluidThreads = {}
     for _, v in pairs(self.items) do
         local type = v.type
         print("trans item:" .. v[1] .. " type:" .. type .. " amount:" .. v.amount)
@@ -32,8 +34,8 @@ function _M:start()
             self:transRecipeMolten(v)
         elseif type == "fluid" then
             fluidSlot = fluidSlot + 1
-            --TODO fluid concurrently
-            self:transRecipeFluid(v, fluidSlot)
+            local t = thread:create(self:transRecipeFluid(v, fluidSlot))
+            table.insert(fluidThreads, t)
         elseif type == "cell" then
             fluidSlot = fluidSlot + 1
             self.suckSlot[fluidSlot] = v.amount * 1000
@@ -43,6 +45,7 @@ function _M:start()
     self:waiting4Fluid(fluidSlot)
     self:suckTankFluid()
     self:toItemInputBus()
+    thread:waitForAll(fluidThreads)
     --因为在花园时间时间获取不了
     --local cost = os.time() - self.startTime
     --print("all transported cost:" .. cost .. ", waiting for assembly line crafting")
@@ -95,7 +98,7 @@ function _M:waiting4Fluid(maxSlot)
             while true do
                 local current = transport.getTankFluid(slot).amount
                 print("slot:" .. slot .. " need:" .. amount .. " current:" .. current)
-                if current == amount then
+                if current >= amount then
                     return true
                 end
                 coroutine.yield(false)
