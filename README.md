@@ -1,4 +1,4 @@
-##如何使用
+## 如何使用
 >推荐fork仓库之后修改完配置文件提交到远程仓库,
 >然后通过脚本拉取增加效率
 ```shell script
@@ -13,7 +13,7 @@ wget https://gitee.com/sh0aky/assembly-line/raw/master/script
 script
 ```
 
-###1.初始化&配置
+### 1.初始化&配置
 
 ####1.1运行initializer并按照顺序放置转运器,程序会自动写入地址到config.lua
 > 1.原材料箱子相邻的transposer
