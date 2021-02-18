@@ -15,7 +15,7 @@ script
 
 ### 1.初始化&配置
 
-####1.1运行initializer并按照顺序放置转运器,程序会自动写入地址到config.lua
+#### 1.1运行initializer并按照顺序放置转运器,程序会自动写入地址到config.lua
 > 1.原材料箱子相邻的transposer
 > 
 > 2.1-14个与输入总线相邻的transposer
@@ -27,32 +27,32 @@ script
 > 设置完成后系统会自动重启
 > 再次说明顺序很重要中途有任何错误都会导致程序无法运行 如果放错请ctrl+c退出重新来过
 
-####1.2设置transposer与原材料箱的面
+#### 1.2设置transposer与原材料箱的面
 >具体sides的定义查看官网API https://ocdoc.cil.li/api:sides
 ```lua
 config.chestInput.chestSourceSide = sides.top
 ```
-####1.3设置transposer与材料输出到输入总线的箱子
+#### 1.3设置transposer与材料输出到输入总线的箱子
 ```lua
 config.chestInput.chestOutputSide = sides.west
 ```
-####1.4设置transposer与熔物品的输出面
+#### 1.4设置transposer与熔物品的输出面
 ```lua
 config.chestInput.moltenOutputSide = sides.north
 ```
-####1.5设置流体输入面
+#### 1.5设置流体输入面
 ```lua
 config.fluidSourceSide = sides.bottom
 ```
 
-####1.6如果要用oc把原料送到输入总线,需要放末影箱在输入总线下并且所有都在同一频道
+#### 1.6如果要用oc把原料送到输入总线,需要放末影箱在输入总线下并且所有都在同一频道
 >如果你有其他方法实现输入总线内有物品就不输送进去 并且按照输出箱的物品循序来抽取可以不用配置这些东西
 
-###2.设置流体到db中
+### 2.设置流体到db中
 
 >目前已知的有润滑油单元,冷却液,UU,焊锡,超能硅岩,丁苯橡胶,无菌培养基,硅橡胶
 
-###3.配置完毕
+### 3.配置完毕
 >cd assembly-line
 >
 >main (启动完毕后每2秒会到箱子里匹配物品)
@@ -63,7 +63,7 @@ config.fluidSourceSide = sides.bottom
 >
 >tools/db (把流体单元放入原料箱的第一个位置,用来记录到流体单元db)
 
-###4.关于recipes中type的说明
+### 4.关于recipes中type的说明
 4.1 item为在装配线中进入输入总线的物品
 
 4.2 molten(熔物品),fluid(在配方中使用对应流体单元的label)这几类物品会按照配方中的顺序进入输入仓
@@ -72,7 +72,7 @@ config.fluidSourceSide = sides.bottom
 
 4.4 fluid根据label会去db中查询对应的index,然后自动设置流体输出总线的对应输出流体
 
-###5.util说明
+### 5.util说明
 
 5.1 db.lua
 ```shell
@@ -95,7 +95,7 @@ config.fluidSourceSide = sides.bottom
     util/readitem readFluid
 ```
 
-##注意点
+## 注意点
 
 >1.recipes的顺序必须要一样不然会把物品送入错误的仓位,流体同理
 
@@ -116,7 +116,7 @@ config.fluidSourceSide = sides.bottom
 
 >8.配方中所有关于电路板的都是晶体,EV的是量子 如果不一样可以自己去修改对应配方
 
-##参考视频
+## 参考视频
 https://www.bilibili.com/video/BV1iz4y1274d/
 
 转换器相对于使用robot配置复杂,造价昂贵(相对来说 其实对iv来说都还行)
