@@ -66,9 +66,9 @@ config.fluidSourceSide = sides.bottom
 ### 4.关于recipes中type的说明
 4.1 item为在装配线中进入输入总线的物品
 
-4.2 molten(熔物品),fluid(在配方中使用对应流体单元的label)这几类物品会按照配方中的顺序进入输入仓
+4.2 molten(熔物品),fluid(在配方中使用对应流体单元的name+damage)这几类物品会按照配方中的顺序进入输入仓
 
-4.3 molten会按照顺序进入提取机,然后被工厂吸取到对应输入仓的流体储罐中
+4.3 molten会按照顺序放入箱子,然后提取机提取流体到输入仓的流体储罐中
 
 4.4 fluid根据label会去db中查询对应的index,然后自动设置流体输出总线的对应输出流体
 
