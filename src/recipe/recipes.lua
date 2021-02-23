@@ -698,7 +698,7 @@ R[43] = {
         { "gregtech:gt.metaitem.01.32695", type = ITEM, amount = 9 },
         { "gregtech:gt.metaitem.01.32675", type = ITEM, amount = 9 },
         { "gregtech:gt.metaitem.01.27070", type = ITEM, amount = 36 },
-        { "gregtech:gt.metaitem.99.314", type = FLUID, amount = 2592, cname = "molten.solderingalloy" },
+        { "gregtech:gt.metaitem.99.314", type = FLUID, amount = 1440, cname = "molten.solderingalloy" },
         { "bartworks:gt.bwMetaGeneratedcell.41", type = FLUID, amount = 20000, cname = "neon" }
     }
 }
@@ -833,7 +833,20 @@ R[50] = {
     }
 }
 
-
+R[51] = {
+    nickname = "Void Miner II",
+    items = {
+        { "gregtech:gt.blockmachines.12741", type = ITEM, amount = 1 },
+        { "gregtech:gt.blockmachines.4484", type = ITEM, amount = 9 },
+        { "gregtech:gt.metaitem.01.17388", type = ITEM, amount = 3 },
+        { "gregtech:gt.metaitem.01.32607", type = ITEM, amount = 9 },
+        { "gregtech:gt.metaitem.01.32696", type = ITEM, amount = 9 },
+        { "gregtech:gt.metaitem.01.32676", type = ITEM, amount = 9 },
+        { "gregtech:gt.metaitem.01.27388", type = ITEM, amount = 36 },
+        { "gregtech:gt.metaitem.99.314", type = FLUID, amount = 1440, cname = "molten.solderingalloy" },
+        { "bartworks:gt.bwMetaGeneratedcell.42", type = FLUID, amount = 20000, cname = "krypton" }
+    }
+}
 
 function _M.getRecipes()
     return R
